@@ -1,0 +1,8 @@
+.newsletter__title {
+  @include heading-3($size-medium-2);
+}
+
+.newsletter__text {
+  @include heading-4($size-medium-2);
+  color: $color-main;
+}

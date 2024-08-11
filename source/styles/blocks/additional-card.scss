@@ -1,0 +1,9 @@
+.additional-card__title {
+  @include heading-4($size-basic-2);
+  color: $color-special-dark;
+  text-transform: uppercase;
+}
+
+.additional-card__price {
+  line-height: $size-basic;
+}

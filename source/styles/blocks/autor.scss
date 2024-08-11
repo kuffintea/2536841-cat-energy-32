@@ -1,0 +1,13 @@
+.autor {
+  @include font($size-basic-2, $size-medium);
+
+  &:active {
+    .autor__text {
+      color: rgba($color-basic, 0.3);
+    }
+  }
+}
+
+.autor__text {
+  color: $color-basic;
+}

@@ -1,3 +1,7 @@
-.advantages {
+.advantages__title {
+  @include heading-2;
+}
 
+.advantages__list {
+  list-style: none;
 }

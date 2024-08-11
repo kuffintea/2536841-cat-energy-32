@@ -1,3 +1,14 @@
 .example {
+  background-color: $color-special-light-2;
+}
 
+.example__title {
+  @include heading-2;
+}
+
+.example__price {
+  @include font($size-basic, $size-medium);
+  font-family: $font-second;
+  color: $color-main;
+  text-transform: uppercase;
 }

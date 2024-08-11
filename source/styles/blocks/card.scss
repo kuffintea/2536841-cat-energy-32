@@ -1,0 +1,9 @@
+.card__title {
+  @include heading-4;
+  color: $color-special-dark;
+  text-transform: uppercase;
+}
+
+.card__info-item {
+  @include text-small;
+}

@@ -1,0 +1,9 @@
+.more__text {
+  @include heading-4;
+  color: $color-special-dark-2;
+  text-transform: uppercase;
+}
+
+.more__description {
+  @include text-small;
+}

@@ -1,0 +1,5 @@
+.gift {
+  @include font($size-basic-2, $size-medium);
+  color: $color-light;
+  background-color: rgba($color-accent, 0.85);
+}

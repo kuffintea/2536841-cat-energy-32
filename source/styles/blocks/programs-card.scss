@@ -1,3 +1,18 @@
 .programs-card {
+  background-color: $color-special-light;
+}
 
+.programs-card__title {
+  @include heading-3;
+  text-transform: uppercase;
+}
+
+.programs-card__link {
+  @include heading-4($size-basic-2);
+  color: $color-main;
+  text-transform: uppercase;
+
+  &:active {
+    color: rgba($color-main, 0.3);
+  }
 }

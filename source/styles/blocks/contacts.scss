@@ -1,0 +1,10 @@
+.contacts__text {
+  @include heading-4;
+  text-transform: uppercase;
+  color: $color-special-dark-2;
+}
+
+.contacts__description {
+  @include font($size-basic, $size-medium);
+  font-style: normal;
+}

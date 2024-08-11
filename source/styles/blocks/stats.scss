@@ -1,3 +1,8 @@
-.stats {
+.stats__number {
+  @include heading-3($size-medium-2);
+  text-transform: uppercase;
+}
 
+.stats__description {
+  @include text-small($size-small);
 }

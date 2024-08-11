@@ -1,0 +1,6 @@
+.form__field {
+  @include font($size-medium, $size-big);
+  font-family: $font-second;
+  text-transform: uppercase;
+  color: $color-basic;
+}

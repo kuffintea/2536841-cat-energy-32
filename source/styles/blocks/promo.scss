@@ -1,3 +1,10 @@
 .promo {
+  @include text-basic($size-basic);
+  font-family: $font-second;
+  color: $color-light;
+  background-color: rgba($color-accent, 0.85);
+}
 
+.promo__title {
+  @include heading-2($size-big-3, $color-light);
 }

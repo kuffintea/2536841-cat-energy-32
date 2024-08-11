@@ -1,3 +1,14 @@
-.main-nav {
+.main-nav__link {
+  @include font($size-medium, $size-medium);
+  font-family: $font-second;
+  color: $color-main;
+  text-transform: uppercase;
 
+  &:hover {
+    color: rgba($color-main, 0.6);
+  }
+
+  &:active {
+    color: rgba($color-main, 0.3);
+  }
 }

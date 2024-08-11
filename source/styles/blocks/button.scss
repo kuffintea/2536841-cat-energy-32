@@ -1,0 +1,27 @@
+.button {
+  @include heading-4;
+  text-transform: uppercase;
+  color: $color-basic;
+  background-color: $color-special-light;
+  border: none;
+  padding: 10px 44px;
+  cursor: pointer;
+  display: inline-block;
+
+  &:is(:hover, :active) {
+    background-color: $color-special-light-3;
+  }
+
+  &--accent {
+    background-color: $color-accent;
+    color: $color-light;
+
+    &:is(:hover, :active) {
+      background-color: $color-accent-2;
+    }
+
+    &:active {
+      color: rgba($color-light, 0.3);
+    }
+  }
+}
