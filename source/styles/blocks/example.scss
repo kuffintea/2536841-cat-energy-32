@@ -3,12 +3,18 @@
 }
 
 .example__title {
-  @include heading-2;
+  @include font($size-big-3, $size-huge, $color-main, $font-second);
+
+  @media (min-width: 768px) {
+    @include font-min($size-huge-2, $size-huge-2);
+  }
 }
 
 .example__price {
-  @include font($size-basic, $size-medium);
-  font-family: $font-second;
-  color: $color-main;
+  @include font($size-basic, $size-medium, $color-main, $font-second);
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium);
+  }
 }

@@ -1,9 +1,16 @@
 .additional-card__title {
-  @include heading-4($size-basic-2);
-  color: $color-special-dark;
+  @include font($size-basic-2, $size-basic-2, $color-special-dark, $font-second);
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium);
+  }
 }
 
 .additional-card__price {
   line-height: $size-basic;
+
+  @media (min-width: 768px) {
+    line-height: $size-medium;
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -13,12 +13,12 @@
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body>
+<body class="page__body">
   <header class="main-header">
     <a class="main-header__link logo" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="images/logo-desktop.svg">
-        <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logo-tablet.svg">
+        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo-desktop.svg">
+        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo-tablet.svg">
         <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании">
       </picture>
       <img class="logo__image-text" src="images/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
@@ -272,7 +272,7 @@
       <form class="newsletter__form form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="email">Ваш email</label>
         <input class="form__field" id="email" name="useremail" type="email" placeholder="kuklachev@gmail.com" required>
-        <button class="form__button button button--accent" type="submit">Подписаться</button>
+        <button class="form__button button button--medium button--accent" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
@@ -313,8 +313,8 @@
           </li>
         </ul>
       </section>
-      <a class="main-footer__autor autor autor--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-        <p class="autor__text">HTML Academy</p>
+      <a class="main-footer__author author author--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="author__text">HTML Academy</span>
       </a>
     </div>
   </footer>

@@ -1,15 +1,20 @@
 .button {
-  @include heading-4;
+  @include font($size-basic-2, $size-medium, $color-basic, $font-second);
+  text-align: center;
   text-transform: uppercase;
-  color: $color-basic;
   background-color: $color-special-light;
   border: none;
   padding: 10px 44px;
   cursor: pointer;
-  display: inline-block;
+  display: block;
 
   &:is(:hover, :active) {
     background-color: $color-special-light-3;
+  }
+
+  &--medium {
+    @include font-min($size-medium, $size-medium-3);
+    padding: 14px 26px;
   }
 
   &--accent {

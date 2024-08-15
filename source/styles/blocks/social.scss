@@ -1,3 +1,35 @@
 .social__list {
-  list-style: none;
+  @include list;
+  max-width: 132px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
 }
+
+.social__link {
+  &:is(:hover, :active, :focus-visible, :focus)::before {
+    background-color: $color-accent;
+  }
+
+  &::before {
+    @include pseudo-element(28px, 22px);
+    @include mask;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--vkontakte::before {
+    mask-image: url("../../icons/logo-vkontakte.svg");
+  }
+
+  &--youtube::before {
+    mask-image: url("../../icons/logo-youtube.svg");
+  }
+
+  &--telegram::before {
+    mask-image: url("../../icons/logo-telegram.svg");
+  }
+}
+

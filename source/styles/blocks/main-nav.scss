@@ -1,14 +1,38 @@
+.main-nav {
+  text-align: center;
+
+  &--index .main-nav__link {
+    @media (min-width: 1440px) {
+      @include font($size-medium, $size-big, $color-light, $font-second );
+
+      &--current {
+        box-shadow: inset 0 -2px $color-light;
+      }
+    }
+  }
+}
+
+.main-nav__list {
+  @include list;
+}
+
 .main-nav__link {
-  @include font($size-medium, $size-medium);
-  font-family: $font-second;
-  color: $color-main;
+  @include font($size-medium, $size-medium, $color-main, $font-second);
   text-transform: uppercase;
 
-  &:hover {
-    color: rgba($color-main, 0.6);
+  &:is(:hover, :focus-visible, :focus) {
+    opacity: 0.6;
   }
 
   &:active {
-    color: rgba($color-main, 0.3);
+    opacity: 0.3;
+  }
+
+  @media (min-width: 768px) {
+    @include font-min($size-basic-3, $size-medium-2);
+
+    &--current {
+      box-shadow: inset 0 -2px $color-accent;
+    }
   }
 }

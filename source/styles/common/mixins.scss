@@ -1,50 +1,43 @@
-@mixin font-face($font-family, $font-src) {
+@mixin font-face($font-family, $font-src, $font-weight: 400, $font-style: normal) {
   @font-face {
     font-family: $font-family;
-    font-weight: 400;
-    font-style: normal;
     src: $font-src;
+    font-weight: $font-weight;
+    font-style: $font-style;
     font-display: swap;
   }
 }
 
-@mixin font($font-size, $line-height) {
+@mixin font($font-size, $line-height, $color: $color-basic, $font-family: $font-basic, $font-weight: 400) {
   font-size: $font-size;
-  font-weight: 400;
   line-height: $line-height;
-}
-
-@mixin heading-2($line-height: $size-huge, $color: $color-main) {
   color: $color;
-  font-family: $font-second;
-  font-size: $size-big-3;
-  font-weight: 400;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  margin: 0;
+}
+
+@mixin font-min($font-size, $line-height) {
+  font-size: $font-size;
   line-height: $line-height;
 }
 
-@mixin heading-3($line-height: $size-big-3) {
-  color: $color-main;
-  font-family: $font-second;
-  font-size: $size-medium-2;
-  font-weight: 400;
-  line-height: $line-height;
+@mixin list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-@mixin heading-4($line-height: $size-medium) {
-  font-family: $font-second;
-  font-size: $size-basic-2;
-  font-weight: 400;
-  line-height: $line-height;
+@mixin pseudo-element($width, $height) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
 }
 
-@mixin text-basic($line-height: $size-basic-3) {
-  font-size: $size-basic;
-  font-weight: 400;
-  line-height: $line-height;
-}
-
-@mixin text-small($line-height: $size-basic-2) {
-  font-size: $size-small;
-  font-weight: 400;
-  line-height: $line-height;
+@mixin mask($background-color: $color-special-medium-3) {
+  background-color: $color-special-medium-3;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }

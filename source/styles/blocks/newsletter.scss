@@ -1,8 +1,19 @@
 .newsletter__title {
-  @include heading-3($size-medium-2);
+  @include font($size-medium-2, $size-medium-2, $color-main, $font-second);
+
+  @media (min-width: 768px) {
+    @include font-min($size-big-2, $size-big-2);
+  }
+
+  @media (min-width: 1440px) {
+    @include font-min($size-huge, $size-huge);
+  }
 }
 
 .newsletter__text {
-  @include heading-4($size-medium-2);
-  color: $color-main;
+  @include font($size-basic-2, $size-medium-2, $color-main, $font-second);
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium-2, $size-big-2);
+  }
 }

@@ -1,10 +1,25 @@
+.contacts__wrapper {
+  display: flex;
+}
+
 .contacts__text {
-  @include heading-4;
+  @include font($size-basic-2, $size-medium, $color-special-dark-2, $font-second);
   text-transform: uppercase;
-  color: $color-special-dark-2;
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium-3);
+  }
 }
 
 .contacts__description {
   @include font($size-basic, $size-medium);
   font-style: normal;
+
+  @media (min-width: 768px) {
+    @include font-min($size-basic-2, $size-medium);
+  }
+}
+
+.contacts__image {
+  display: block;
 }

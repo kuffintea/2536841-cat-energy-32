@@ -1,5 +1,11 @@
 .gift {
-  @include font($size-basic-2, $size-medium);
-  color: $color-light;
+  @include font($size-basic-2, $size-medium, $color-light);
   background-color: rgba($color-accent, 0.85);
+  text-align: center;
+
+  &::before {
+    @include pseudo-element(78px, 80px);
+    background: url("../../icons/gift.svg") no-repeat center;
+    margin: 0 auto;
+  }
 }

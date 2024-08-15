@@ -1,3 +1,7 @@
 .main-page__title {
-  @include heading-2($size-big-3);
+  @include font($size-big-3, $size-big-3, $color-main, $font-second);
+
+  @media (min-width: 768px) {
+    @include font-min($size-huge-2, $size-huge-2);
+  }
 }

@@ -1,10 +1,53 @@
 .promo {
-  @include text-basic($size-basic);
-  font-family: $font-second;
-  color: $color-light;
-  background-color: rgba($color-accent, 0.85);
+  @include font($size-basic, $size-basic, $color-light, $font-second);
+  background-image: linear-gradient(to bottom, rgba($color-accent, 0.85) 60%, transparent 50%);
+
+  @media (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    @include font($size-medium, $size-medium, $color-main, $font-second);
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    background-image: none;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 82px;
+  }
 }
 
 .promo__title {
-  @include heading-2($size-big-3, $color-light);
+  @include font($size-big-3, $size-big-3, $color-light, $font-second);
+  margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    @include font($size-huge-2, $size-huge-2, $color-main, $font-second);
+    margin-bottom: 40px;
+  }
+}
+
+.promo__text {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+}
+
+.promo__image {
+  display: block;
+  margin: 0 auto 3px;
+}
+
+.promo__link {
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium-3);
+    padding: 14px 26px;
+  }
 }
