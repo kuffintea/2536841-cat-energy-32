@@ -1,0 +1,60 @@
+.card {
+  padding: 20px 0 25px;
+
+  @media (max-width: 767px) {
+    border-bottom: 1px solid $color-border-light-2;
+
+    &:first-of-type {
+      border-top: 1px solid $color-border-light-2;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 40px 37px;
+    background-color: $color-special-light;
+  }
+}
+
+.card__image {
+  @media (min-width: 768px) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 31px;
+  }
+}
+
+.card__title {
+  @include font($size-basic-2, $size-medium, $color-special-dark, $font-second);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium-2);
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 23px;
+  }
+}
+
+.card__info {
+  margin: 0;
+  margin-bottom: 17px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.card__info-item {
+  @include font($size-small, $size-basic-2);
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    @include font-min($size-basic-2, $size-medium);
+  }
+}

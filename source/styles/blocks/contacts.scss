@@ -1,0 +1,30 @@
+.contacts__wrapper {
+  display: flex;
+  padding: 26px 0;
+
+  @media (min-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.contacts__text {
+  @include font($size-basic-2, $size-medium, $color-special-dark-2, $font-second);
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium-3);
+  }
+}
+
+.contacts__description {
+  @include font($size-basic, $size-medium);
+  font-style: normal;
+
+  @media (min-width: 768px) {
+    @include font-min($size-basic-2, $size-medium);
+  }
+}
+
+.contacts__image {
+  display: block;
+}

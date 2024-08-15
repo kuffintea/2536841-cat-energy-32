@@ -1,0 +1,75 @@
+.programs-card {
+  background-color: $color-special-light;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &::before {
+    @include pseudo-element(67px, 50px);
+  }
+
+  &--diet::before {
+    background: url("../../icons/program-diet.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &--gain::before {
+    background: url("../../icons/program-gain.svg") no-repeat center;
+    background-size: contain;
+  }
+}
+
+.programs-card__title {
+  @include font($size-medium-2, $size-big-3, $color-main, $font-second);
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    @include font-min($size-big-3, $size-big-3);
+  }
+}
+
+.programs-card__text {
+  margin: 0;
+
+  @media (max-width: 767px) {
+    border-bottom: 1px solid $color-border-medium;
+  }
+}
+
+.programs-card__link {
+  @include font($size-basic-2, $size-basic-2, $color-main, $font-second);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+
+  &::after {
+    @include pseudo-element(24px, 10px);
+    background: url("../../icons/arrow.svg") no-repeat center;
+    background-size: contain;
+    margin-left: 15px;
+    transition: all 0.3s linear;
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scaleX(1.35);
+    transform-origin: left;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-big);
+  }
+}

@@ -1,0 +1,34 @@
+.author {
+  @include font($size-basic-2, $size-medium, $color-basic);
+  display: flex;
+  align-items: center;
+
+  &::after {
+    @include pseudo-element(27px, 34px);
+    @include mask;
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    background-color: $color-accent;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--htmlacademy::after {
+    mask-image: url("../../icons/logo-htmlacademy.svg");
+  }
+
+  @media (min-width: 768px) {
+    @include font-min($size-basic-2, $size-medium);
+  }
+}
+
+.author__text {
+  margin-right: 23px;
+
+  @media (max-width: 767px) {
+    margin-right: auto;
+  }
+}

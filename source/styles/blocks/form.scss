@@ -1,0 +1,19 @@
+.form__field {
+  @include font($size-medium, $size-big, $color-basic, $font-second);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid $color-border-light;
+
+  &:hover {
+    border-color: $color-border-medium-2;
+  }
+
+  &:is(:focus-visible, :focus) {
+    border-color: $color-basic;
+  }
+
+  &--error,
+  &--error:is(:hover, :focus-visible, :focus) {
+    border-color: $color-error;
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -13,12 +13,12 @@
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body>
+<body class="page__body">
   <header class="main-header">
     <a class="main-header__link logo" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" width="202" height="59" type="image/svg+xml" srcset="images/logo-desktop.svg">
-        <source media="(min-width: 768px)" width="174" height="50" type="image/svg+xml" srcset="images/logo-tablet.svg">
+        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logo-desktop.svg">
+        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logo-tablet.svg">
         <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании">
       </picture>
       <img class="logo__image-text" src="images/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
@@ -40,7 +40,7 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
   </header>
-  <main class="main-page">
+  <main class="main-page main-page--catalog">
     <h1 class="main-page__title">Каталог продукции</h1>
     <section class="catalog">
       <h2 class="visually-hidden">Корма</h2>
@@ -67,7 +67,7 @@
             <dd class="card__info-description">700 ₽</dd>
           </div>
         </dl>
-        <a class="card__button button" href="#">Заказать</a>
+        <a class="card__button button button--accent" href="#">Заказать</a>
       </article>
       <article class="catalog__card card">
         <a class="card__link" href="#">
@@ -92,7 +92,7 @@
             <dd class="card__info-description">1000 ₽</dd>
           </div>
         </dl>
-        <a class="card__button button" href="#">Заказать</a>
+        <a class="card__button button button--accent" href="#">Заказать</a>
       </article>
       <article class="catalog__card card">
         <a class="card__link" href="#">
@@ -117,7 +117,7 @@
             <dd class="card__info-description">700 ₽</dd>
           </div>
         </dl>
-        <a class="card__button button" href="#">Заказать</a>
+        <a class="card__button button button--accent" href="#">Заказать</a>
       </article>
       <article class="catalog__card card">
         <a class="card__link" href="#">
@@ -142,7 +142,7 @@
             <dd class="card__info-description">1000 ₽</dd>
           </div>
         </dl>
-        <a class="card__button button" href="#">Заказать</a>
+        <a class="card__button button button--accent" href="#">Заказать</a>
       </article>
       <article class="catalog__card card">
         <a class="card__link" href="#">
@@ -167,7 +167,7 @@
             <dd class="card__info-description">400 ₽</dd>
           </div>
         </dl>
-        <a class="card__button button" href="#">Заказать</a>
+        <a class="card__button button button--accent" href="#">Заказать</a>
       </article>
       <article class="catalog__card card">
         <a class="card__link" href="#">
@@ -192,7 +192,7 @@
             <dd class="card__info-description">700 ₽</dd>
           </div>
         </dl>
-        <a class="card__button button" href="#">Заказать</a>
+        <a class="card__button button button--accent" href="#">Заказать</a>
       </article>
       <article class="catalog__card card">
         <a class="card__link" href="#">
@@ -217,7 +217,7 @@
             <dd class="card__info-description">500 ₽</dd>
           </div>
         </dl>
-        <a class="card__button button" href="#">Заказать</a>
+        <a class="card__button button button--accent" href="#">Заказать</a>
       </article>
       <div class="catalog__more more">
         <p class="more__text">Показать еще 100500 товаров</p>
@@ -234,7 +234,7 @@
             1 упаковка (100 г)
             <span class="additional-card__price-number">200 ₽</span>
           </p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <a class="additional-card__link button button--accent" href="#">Заказать</a>
         </li>
         <li class="additional__item additional-card">
           <h3 class="additional-card__title">Питьевая вода</h3>
@@ -242,7 +242,7 @@
             5 литров
             <span class="additional-card__price-number">50 ₽</span>
           </p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <a class="additional-card__link button button--accent" href="#">Заказать</a>
         </li>
         <li class="additional__item additional-card">
           <h3 class="additional-card__title">Молоко</h3>
@@ -250,7 +250,7 @@
             1 литр
             <span class="additional-card__price-number">100 ₽</span>
           </p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <a class="additional-card__link button button--accent" href="#">Заказать</a>
         </li>
         <li class="additional__item additional-card">
           <h3 class="additional-card__title">Витамины</h3>
@@ -258,21 +258,21 @@
             1 упаковка (30 г)
             <span class="additional-card__price-number">300 ₽</span>
           </p>
-          <a class="additional-card__link button" href="#">Заказать</a>
+          <a class="additional-card__link button button--accent" href="#">Заказать</a>
         </li>
       </ul>
+      <aside class="additional__gift gift">
+        <h2 class="visually-hidden">Получите подарок!</h2>
+        <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+      </aside>
     </section>
-    <aside class="gift">
-      <h2 class="visually-hidden">Получите подарок!</h2>
-      <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
-    </aside>
     <section class="newsletter">
       <h2 class="newsletter__title">Акции и новинки</h2>
       <p class="newsletter__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
       <form class="newsletter__form form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="email">Ваш email</label>
-        <input class="form__field" id="email" name="useremail" type="email" placeholder="кuklachev@gmail.com" required>
-        <button class="form__button button" type="submit">Подписаться</button>
+        <input class="form__field" id="email" name="useremail" type="email" placeholder="kuklachev@gmail.com" required>
+        <button class="form__button button button--medium button--accent" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
@@ -313,8 +313,8 @@
           </li>
         </ul>
       </section>
-      <a class="main-footer__autor autor autor--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
-        <p class="autor__text">HTML Academy</p>
+      <a class="main-footer__author author author--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="author__text">HTML Academy</span>
       </a>
     </div>
   </footer>

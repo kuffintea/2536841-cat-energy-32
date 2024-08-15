@@ -1,0 +1,56 @@
+.more {
+  text-align: center;
+  padding: 25px 0;
+  border-bottom: 1px solid $color-border-light-2;
+
+
+  &::before {
+    @include pseudo-element(30px, 30px);
+    background: url("../../icons/plus.svg") no-repeat center;
+    background-size: contain;
+    margin: 0 auto 23px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 40px 37px;
+  }
+}
+
+.more__text {
+  @include font($size-basic-2, $size-medium, $color-special-dark-2, $font-second);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium-2);
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 26px;
+  }
+}
+
+.more__description {
+  @include font($size-small, $size-basic-2);
+  margin-bottom: 21px;
+
+  @media (min-width: 768px) {
+    @include font-min($size-basic-2, $size-basic-3);
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 90px;
+  }
+}

@@ -1,0 +1,57 @@
+.example {
+  background-color: $color-special-light-2;
+  padding: 25px 0 40px;
+
+  @media (min-width: 768px) {
+    background-image: linear-gradient(to bottom, transparent 37%, #eaeaea 37%);
+    background-color: transparent;
+    padding: 45px 0 101px;
+  }
+}
+
+.example__title {
+  @include font($size-big-3, $size-huge, $color-main, $font-second);
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    @include font-min($size-huge-2, $size-huge-2);
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 146px;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 69px;
+  }
+}
+
+.example__list {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: 1440px) {
+    margin-bottom: 55px;
+  }
+}
+
+.example__price {
+  @include font($size-basic, $size-medium, $color-main, $font-second);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    @include font-min($size-medium, $size-medium);
+    margin-bottom: 0;
+  }
+}

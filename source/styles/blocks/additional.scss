@@ -1,0 +1,25 @@
+.additional {
+  padding-top: 25px;
+
+  @media (min-width: 768px) {
+    padding-top: 74px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 71px;
+  }
+}
+
+.additional__title {
+  @include font($size-medium-2, $size-medium-2, $color-main, $font-second);
+  margin-bottom: 36px;
+
+  @media (min-width: 768px) {
+    @include font-min($size-big-2, $size-big-2);
+    margin-bottom: 80px;
+  }
+}
+
+.additional__list {
+  @include list;
+}

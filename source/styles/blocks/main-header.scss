@@ -1,0 +1,43 @@
+.main-header {
+  display: flex;
+  position: relative;
+  padding: 13px 0 15px;
+
+  @media (max-width: 767px) {
+    border-bottom: 1px solid $color-border-light;
+  }
+
+  @media (min-width: 768px) {
+    padding: 25px 0 0;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 55px;
+  }
+}
+
+.main-header__toggle {
+  background: transparent url("../../icons/menu.svg") no-repeat center;
+  background-size: 24px;
+  border: none;
+  margin: 0;
+  padding: 12px;
+  cursor: pointer;
+
+  &:is(:hover, :focus-visible, :focus) {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-nav.show + .main-header__toggle {
+  background: transparent url("../../icons/cross.svg") no-repeat center;
+  background-size: 18px;
+}

@@ -1,0 +1,25 @@
+.advantages-card {
+  &::before {
+    @include pseudo-element(60px, 60px);
+    background-color: $color-accent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 32px;
+  }
+
+  &--nutrients::before {
+    background-image: url("../../icons/leaf.svg");
+  }
+
+  &--type::before {
+    background-image: url("../../icons/cup.svg");
+  }
+
+  &--meal::before {
+    background-image: url("../../icons/cutlery.svg");
+  }
+
+  &--time::before {
+    background-image: url("../../icons/clock.svg");
+  }
+}

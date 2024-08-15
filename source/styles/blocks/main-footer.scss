@@ -1,0 +1,28 @@
+.main-page--catalog + .main-footer .main-footer__contacts {
+  @media (max-width: 1439px) {
+    background-color: $color-special-light;
+  }
+}
+
+.main-footer__wrapper {
+  background-color: $color-special-light;
+  padding: 40px 0;
+
+  @media (max-width: 767px) {
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $color-border-medium;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 66px 0;
+  }
+}
