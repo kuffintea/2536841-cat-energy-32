@@ -1,5 +1,10 @@
 .contacts__wrapper {
   display: flex;
+  padding: 26px 0;
+
+  @media (min-width: 768px) {
+    padding: 60px 0;
+  }
 }
 
 .contacts__text {

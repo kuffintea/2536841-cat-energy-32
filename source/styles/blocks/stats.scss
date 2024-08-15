@@ -1,3 +1,7 @@
+.stats {
+  display: flex;
+}
+
 .stats__number {
   @include font($size-medium-2, $size-medium-2, $color-main, $font-second);
   text-transform: uppercase;

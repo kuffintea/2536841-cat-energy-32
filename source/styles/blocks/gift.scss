@@ -2,10 +2,23 @@
   @include font($size-basic-2, $size-medium, $color-light);
   background-color: rgba($color-accent, 0.85);
   text-align: center;
+  padding: 59px 0 43px;
 
   &::before {
     @include pseudo-element(78px, 80px);
     background: url("../../icons/gift.svg") no-repeat center;
-    margin: 0 auto;
+    margin: 0 auto 48px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1440px) {
+      margin-bottom: 46px;
+    }
   }
+}
+
+.gift__text {
+  margin: 0;
 }

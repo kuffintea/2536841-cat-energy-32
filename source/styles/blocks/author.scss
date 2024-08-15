@@ -27,4 +27,8 @@
 
 .author__text {
   margin-right: 23px;
+
+  @media (max-width: 767px) {
+    margin-right: auto;
+  }
 }
