@@ -2,11 +2,11 @@
   &--catalog {
     padding-top: 27px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       padding-top: 65px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop) {
       padding-top: 74px;
     }
   }
@@ -16,7 +16,7 @@
   @include font($size-big-3, $size-big-3, $color-main, $font-second);
   margin-bottom: 41px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-huge-2, $size-huge-2);
     margin-bottom: 84px;
   }

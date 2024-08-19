@@ -2,7 +2,7 @@
   @include font($size-basic, $size-basic-3, $color-basic);
   margin: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-basic-2, $size-medium-2);
   }
 }

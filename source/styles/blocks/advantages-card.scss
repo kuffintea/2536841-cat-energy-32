@@ -1,25 +1,27 @@
 .advantages-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+
   &::before {
-    @include pseudo-element(60px, 60px);
-    background-color: $color-accent;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include pseudo-element(60px, 60px, $color-accent);
     background-size: 30px 32px;
   }
 
   &--nutrients::before {
-    background-image: url("../../icons/leaf.svg");
+    background-image: url("../../icons/stack.svg#leaf");
   }
 
   &--type::before {
-    background-image: url("../../icons/cup.svg");
+    background-image: url("../../icons/stack.svg#cup");
   }
 
   &--meal::before {
-    background-image: url("../../icons/cutlery.svg");
+    background-image: url("../../icons/stack.svg#cutlery");
   }
 
   &--time::before {
-    background-image: url("../../icons/clock.svg");
+    background-image: url("../../icons/stack.svg#clock");
   }
 }

@@ -2,22 +2,20 @@
   display: flex;
   position: relative;
   padding: 13px 0 15px;
+  border-bottom: 1px solid $color-border-light;
 
-  @media (max-width: 767px) {
-    border-bottom: 1px solid $color-border-light;
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     padding: 25px 0 0;
+    border-bottom: none;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop) {
     padding-top: 55px;
   }
 }
 
 .main-header__toggle {
-  background: transparent url("../../icons/menu.svg") no-repeat center;
+  background: transparent url("../../icons/stack.svg#menu") no-repeat center;
   background-size: 24px;
   border: none;
   margin: 0;
@@ -32,12 +30,12 @@
     opacity: 0.3;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     display: none;
   }
 }
 
 .main-nav.show + .main-header__toggle {
-  background: transparent url("../../icons/cross.svg") no-repeat center;
+  background-image: url("../../icons/stack.svg#cross");
   background-size: 18px;
 }
