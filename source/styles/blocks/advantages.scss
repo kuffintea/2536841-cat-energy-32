@@ -1,14 +1,16 @@
 .advantages {
   padding: 20px 0 49px;
 
-  @media (min-width: 768px) and (max-width: 1439px) {
+  @media (min-width: $tablet) {
     margin-bottom: 45px;
     padding: 45px 0 47px;
     border-bottom: 1px solid $color-border-light;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop) {
     padding: 71px 0 69px;
+    margin-bottom: 0;
+    border-bottom: none;
   }
 }
 
@@ -16,7 +18,7 @@
   @include font($size-big-3, $size-huge, $color-main, $font-second);
   margin-bottom: 40px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-huge-2, $size-huge-2);
     margin-bottom: 32px;
   }
@@ -27,11 +29,11 @@
   display: grid;
   gap: 20px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     gap: 37px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop) {
     gap: 44px 94px;
   }
 }

@@ -28,15 +28,19 @@
   margin: 0;
 }
 
-@mixin pseudo-element($width, $height) {
+@mixin pseudo-element($width, $height, $background-color: transparent) {
   content: "";
   display: block;
   width: $width;
   height: $height;
+  background-color: $background-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 @mixin mask($background-color: $color-special-medium-3) {
-  background-color: $color-special-medium-3;
+  background-color: $background-color;
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;

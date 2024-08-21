@@ -4,13 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .social__link {
-  &:is(:hover, :active, :focus-visible, :focus)::before {
-    background-color: $color-accent;
-  }
-
   &::before {
     @include pseudo-element(28px, 22px);
     @include mask;
@@ -21,14 +19,18 @@
   }
 
   &--vkontakte::before {
-    mask-image: url("../../icons/logo-vkontakte.svg");
+    mask-image: url("../../icons/stack.svg#logo-vkontakte");
   }
 
   &--youtube::before {
-    mask-image: url("../../icons/logo-youtube.svg");
+    mask-image: url("../../icons/stack.svg#logo-youtube");
   }
 
   &--telegram::before {
-    mask-image: url("../../icons/logo-telegram.svg");
+    mask-image: url("../../icons/stack.svg#logo-telegram");
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::before {
+    background-color: $color-accent;
   }
 }

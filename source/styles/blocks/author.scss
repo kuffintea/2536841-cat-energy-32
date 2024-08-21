@@ -17,10 +17,10 @@
   }
 
   &--htmlacademy::after {
-    mask-image: url("../../icons/logo-htmlacademy.svg");
+    mask-image: url("../../icons/stack.svg#logo-htmlacademy");
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-basic-2, $size-medium);
   }
 }
@@ -28,7 +28,7 @@
 .author__text {
   margin-right: 23px;
 
-  @media (max-width: 767px) {
+  @media (max-width: ($tablet - 1px)) {
     margin-right: auto;
   }
 }

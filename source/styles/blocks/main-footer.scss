@@ -1,5 +1,5 @@
 .main-page--catalog + .main-footer .main-footer__contacts {
-  @media (max-width: 1439px) {
+  @media (max-width: ($desktop - 1px)) {
     background-color: $color-special-light;
   }
 }
@@ -8,7 +8,7 @@
   background-color: $color-special-light;
   padding: 40px 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: ($tablet - 1px)) {
     & > *:not(:last-child) {
       margin-bottom: 20px;
       padding-bottom: 20px;
@@ -16,13 +16,13 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     padding: 55px 0;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop) {
     padding: 66px 0;
   }
 }

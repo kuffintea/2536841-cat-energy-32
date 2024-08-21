@@ -1,3 +1,30 @@
-// .slider__image {
-//   display: block;
-// }
+.slider__button {
+  padding: 9px 6px;
+  cursor: pointer;
+  border: 2px solid $color-special-medium-3;
+  border-radius: 50%;
+  background-color: $color-light;
+
+  &::before {
+    @include pseudo-element(24px, 18px);
+    @include mask;
+    mask-image: url("../../icons/stack.svg#controls");
+  }
+
+  &:is(:hover, :focus-visible, :focus) {
+    border-color: $color-accent;
+  }
+
+  &:active {
+    opacity: 0.6;
+    border-color: $color-accent-2;
+  }
+
+  &:is(:hover, :focus-visible, :focus)::before {
+    background-color: $color-accent;
+  }
+
+  &:active::before {
+    background-color: $color-accent-2;
+  }
+}

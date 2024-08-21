@@ -10,12 +10,8 @@
     opacity: 0.6;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: ($tablet - 1px)) {
     flex-grow: 1;
-
-    .logo__image {
-      margin-right: 13px;
-    }
 
     .logo__image-text {
       margin: 0 auto;
@@ -25,4 +21,8 @@
 
 .logo__image {
   display: block;
+
+  @media (min-width: $tablet) {
+    margin-right: 13px;
+  }
 }

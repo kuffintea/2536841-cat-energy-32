@@ -4,11 +4,11 @@
   &:not(:last-child) {
     margin-bottom: 20px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet) {
       margin-bottom: 30px;
     }
 
-    @media (min-width: 1440px) {
+    @media (min-width: $desktop) {
       margin-bottom: 0;
     }
   }
@@ -18,13 +18,11 @@
   }
 
   &--diet::before {
-    background: url("../../icons/program-diet.svg") no-repeat center;
-    background-size: contain;
+    background-image: url("../../icons/stack.svg#program-diet");
   }
 
   &--gain::before {
-    background: url("../../icons/program-gain.svg") no-repeat center;
-    background-size: contain;
+    background-image: url("../../icons/stack.svg#program-gain");
   }
 }
 
@@ -32,7 +30,7 @@
   @include font($size-medium-2, $size-big-3, $color-main, $font-second);
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-big-3, $size-big-3);
   }
 }
@@ -40,7 +38,7 @@
 .programs-card__text {
   margin: 0;
 
-  @media (max-width: 767px) {
+  @media (max-width: ($tablet - 1px)) {
     border-bottom: 1px solid $color-border-medium;
   }
 }
@@ -54,8 +52,7 @@
 
   &::after {
     @include pseudo-element(24px, 10px);
-    background: url("../../icons/arrow.svg") no-repeat center;
-    background-size: contain;
+    background-image: url("../../icons/stack.svg#arrow");
     margin-left: 15px;
     transition: all 0.3s linear;
   }
@@ -69,7 +66,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-medium, $size-big);
   }
 }

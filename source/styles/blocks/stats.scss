@@ -6,7 +6,7 @@
   @include font($size-medium-2, $size-medium-2, $color-main, $font-second);
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-big, $size-big-3);
   }
 }
@@ -14,7 +14,7 @@
 .stats__description {
   @include font($size-small, $size-small);
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     @include font-min($size-basic, $size-basic);
   }
 }
