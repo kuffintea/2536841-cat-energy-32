@@ -1,12 +1,30 @@
-.main-page--catalog + .main-footer .main-footer__contacts {
+.main-footer {
+  background-color: $color-special-light;
+}
+
+
+.page__body--catalog .main-footer__contacts {
   @media (max-width: ($desktop - 1px)) {
     background-color: $color-special-light;
   }
 }
 
 .main-footer__wrapper {
-  background-color: $color-special-light;
-  padding: 40px 0;
+  padding-top: 41px;
+  padding-bottom: 41px;
+
+
+  @media (min-width: $tablet) {
+    padding-top: 58px;
+    padding-bottom: 55px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
 
   @media (max-width: ($tablet - 1px)) {
     & > *:not(:last-child) {
@@ -14,15 +32,5 @@
       padding-bottom: 20px;
       border-bottom: 1px solid $color-border-medium;
     }
-  }
-
-  @media (min-width: $tablet) {
-    display: flex;
-    justify-content: space-between;
-    padding: 55px 0;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 66px 0;
   }
 }

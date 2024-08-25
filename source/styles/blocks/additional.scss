@@ -6,7 +6,10 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 71px;
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 0 80px;
+    padding-top: 72px;
   }
 }
 
@@ -17,12 +20,19 @@
   @media (min-width: $tablet) {
     @include font-min($size-big-2, $size-big-2);
     margin-bottom: 80px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    @include font-min($size-huge, $size-huge);
+    grid-column: 1/-1;
+    padding: 0;
   }
 }
 
 .additional__list {
   @include list;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet) {
     margin-bottom: 70px;

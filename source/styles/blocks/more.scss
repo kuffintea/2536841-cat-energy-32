@@ -1,18 +1,19 @@
 .more {
   text-align: center;
-  padding: 25px 0;
+  padding: 21px 0 23px;
   border-bottom: 1px solid $color-border-light-2;
-
+  flex-basis: 230px;
+  flex-grow: 1;
 
   &::before {
     @include pseudo-element(30px, 30px);
     background-image: url("../../icons/stack.svg#plus");
-    margin: 0 auto 23px;
+    margin: 0 auto 25px;
 
     @media (min-width: $tablet) {
-      margin-bottom: 50px;
       width: 60px;
       height: 60px;
+      margin-bottom: 48px;
     }
 
     @media (min-width: $desktop) {
@@ -21,7 +22,14 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 40px 37px;
+    padding: 52px 37px 40px;
+    border-bottom: 0;
+    box-shadow: 0 0 0 1px $color-special-light;
+    flex-basis: 260px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-basis: 245px;
   }
 }
 
@@ -33,10 +41,12 @@
   @media (min-width: $tablet) {
     @include font-min($size-medium, $size-medium-2);
     margin-bottom: 23px;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 26px;
+    padding: 0;
   }
 }
 
@@ -47,9 +57,11 @@
   @media (min-width: $tablet) {
     @include font-min($size-basic-2, $size-basic-3);
     margin-bottom: 82px;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 90px;
+    padding: 0;
   }
 }

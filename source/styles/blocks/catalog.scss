@@ -1,4 +1,13 @@
-// .catalog {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 40px;
+
+  @media (min-width: $tablet) {
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 63px 80px;
+  }
+}

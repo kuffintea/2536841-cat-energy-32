@@ -26,3 +26,9 @@
     margin-right: 13px;
   }
 }
+
+.main-footer__link .logo__image-text {
+  @media (min-width: $tablet) {
+    margin-right: 34px;
+  }
+}

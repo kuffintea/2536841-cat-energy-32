@@ -1,12 +1,16 @@
 .advantages-card {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
-  align-items: center;
+  position: relative;
+  counter-increment: advantage-number;
 
   &::before {
     @include pseudo-element(60px, 60px, $color-accent);
     background-size: 30px 32px;
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
   }
 
   &--nutrients::before {
@@ -23,5 +27,24 @@
 
   &--time::before {
     background-image: url("../../icons/stack.svg#clock");
+  }
+
+  @media (max-width: ($tablet - 1px)) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      @include font(280px, 280px, $color-special-light, $font-second);
+      @include pseudo-element(112px, 280px);
+      content: counter(advantage-number);
+      position: absolute;
+      top: -22%;
+      right: 9%;
+      z-index: -1;
+    }
   }
 }

@@ -1,20 +1,48 @@
 .stats {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 124px);
+  gap: 32px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(auto-fit, 162px);
+    gap: 42px;
+  }
+}
+
+.stats__item {
+  text-align: center;
 }
 
 .stats__number {
   @include font($size-medium-2, $size-medium-2, $color-main, $font-second);
   text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+  padding: 15px 18px 16px 16px;
 
   @media (min-width: $tablet) {
     @include font-min($size-big, $size-big-3);
+    padding: 15px 15px 18px 16px;
   }
 }
 
 .stats__description {
   @include font($size-small, $size-small);
+  transform: translateY(-40%);
+  margin: 0 25px 0 20px;
+  background-color: $color-special-light-2;
 
   @media (min-width: $tablet) {
     @include font-min($size-basic, $size-basic);
+    transform: translateY(-60%);
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    margin: 0 10px;
+    background-color: $color-light;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 19px 0 18px;
   }
 }

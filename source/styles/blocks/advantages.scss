@@ -1,15 +1,18 @@
 .advantages {
-  padding: 20px 0 49px;
+  padding-top: 20px;
+  padding-bottom: 49px;
+  counter-reset: advantage-number;
 
   @media (min-width: $tablet) {
-    margin-bottom: 45px;
-    padding: 45px 0 47px;
+    padding-top: 47px;
+    padding-bottom: 104px;
     border-bottom: 1px solid $color-border-light;
   }
 
   @media (min-width: $desktop) {
-    padding: 71px 0 69px;
     margin-bottom: 0;
+    padding-top: 71px;
+    padding-bottom: 69px;
     border-bottom: none;
   }
 }
@@ -20,7 +23,7 @@
 
   @media (min-width: $tablet) {
     @include font-min($size-huge-2, $size-huge-2);
-    margin-bottom: 32px;
+    margin-bottom: 72px;
   }
 }
 
@@ -30,10 +33,11 @@
   gap: 20px;
 
   @media (min-width: $tablet) {
-    gap: 37px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 250px));
+    gap: 134px;
   }
 
   @media (min-width: $desktop) {
-    gap: 44px 94px;
+    gap: 111px 73px;
   }
 }

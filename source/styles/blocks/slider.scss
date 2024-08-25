@@ -1,14 +1,57 @@
+.slider {
+  position: relative;
+  height: 256px;
+
+  @media (min-width: $tablet) {
+    height: 512px;
+  }
+}
+
+.slider__image {
+  height: 256px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @media (min-width: $tablet) {
+    height: 512px;
+  }
+
+  @media (max-width: ($desktop - 1px)) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .slider__button {
   padding: 9px 6px;
   cursor: pointer;
   border: 2px solid $color-special-medium-3;
   border-radius: 50%;
   background-color: $color-light;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   &::before {
     @include pseudo-element(24px, 18px);
     @include mask;
     mask-image: url("../../icons/stack.svg#controls");
+  }
+
+  &::after {
+    @include pseudo-element(4px, 256px);
+    background-color: $color-special-medium-3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet) {
+      height: 512px;
+    }
   }
 
   &:is(:hover, :focus-visible, :focus) {

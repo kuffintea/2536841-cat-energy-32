@@ -1,33 +1,28 @@
 .main-nav {
   text-align: center;
 
-  &--index .main-nav__link {
-    @media (min-width: $desktop) {
-      @include font($size-medium, $size-big, $color-light, $font-second );
-
-      &--current {
-        box-shadow: inset 0 -2px $color-light;
-      }
-    }
-  }
-
   @media (max-width: ($tablet - 1px)) {
     position: absolute;
     top: 67px;
     left: 0;
     right: 0;
     background-color: $color-light;
-    overflow: hidden;
+    overflow: auto;
     height: 0;
-    transition: height 0.5s ease;
 
-    &.show {
+    &--show {
       height: auto;
+      max-height: calc(100vh - 67px);
     }
   }
 
   @media (min-width: $tablet) {
     margin-left: auto;
+    max-width: 70%;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 40%;
   }
 }
 
@@ -36,16 +31,22 @@
 
   @media (min-width: $tablet) {
     display: flex;
-    gap: 33px;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 34px;
   }
 }
+
 
 .main-nav__link {
   @include font($size-medium, $size-medium, $color-main, $font-second);
   text-transform: uppercase;
-  display: block;
   padding: 22px 0;
   border-bottom: 1px solid $color-border-light;
+  display: block;
 
   &:is(:hover, :focus-visible, :focus) {
     opacity: 0.6;
@@ -57,7 +58,7 @@
 
   @media (min-width: $tablet) {
     @include font-min($size-basic-3, $size-medium-2);
-    padding: 14px 0 10px;
+    padding: 14px 3px 8px;
     border-bottom: 2px solid transparent;
 
     &--current {
@@ -68,5 +69,15 @@
   @media (min-width: $desktop) {
     @include font-min($size-medium, $size-big);
     padding: 16px 0 8px;
+  }
+}
+
+.page__body--index .main-nav__link {
+  @media (min-width: $desktop) {
+    @include font($size-medium, $size-big, $color-light, $font-second );
+
+    &--current {
+      box-shadow: inset 0 -2px $color-light;
+    }
   }
 }

@@ -1,20 +1,54 @@
 .gift {
   @include font($size-basic-2, $size-medium, $color-light);
-  background-color: rgba($color-accent, 0.85);
+  @include banner-accent("cat-in-bag-mobile@1x.png");
   text-align: center;
   padding: 59px 0 43px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   &::before {
     @include pseudo-element(78px, 80px);
-    background-image: url("../../icons/stack.svg#gift");
     margin: 0 auto 48px;
+    background-image: url("../../icons/stack.svg#gift");
 
     @media (min-width: $tablet) {
-      margin-bottom: 0;
+      width: 80px;
+      height: 82px;
+      margin: 0;
     }
 
     @media (min-width: $desktop) {
-      margin-bottom: 46px;
+      margin: 0 auto 46px;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    @include banner-accent("cat-in-bag-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet) {
+    @include banner-accent("cat-in-bag-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      @include banner-accent("cat-in-bag-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    text-align: left;
+    padding: 60px 127px 58px 79px;
+    background-position: top 60% center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    @include banner-accent("cat-in-bag-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      @include banner-accent("cat-in-bag-desktop@2x.png");
     }
   }
 }

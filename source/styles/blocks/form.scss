@@ -1,19 +1,32 @@
 .form__field {
   @include font($size-medium, $size-big, $color-basic, $font-second);
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 12px;
   border: 1px solid $color-border-light;
+  width: 100%;
 
   &:hover {
     border-color: $color-border-medium-2;
   }
 
-  &:is(:focus-visible, :focus) {
+  &:is(:focus-visible, :focus, :active) {
     border-color: $color-basic;
   }
 
   &--error,
   &--error:is(:hover, :focus-visible, :focus) {
     border-color: $color-error;
+  }
+}
+
+.form__button {
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 65%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 50%;
   }
 }

@@ -1,10 +1,30 @@
 .example {
   background-color: $color-special-light-2;
-  padding: 25px 0 40px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet) {
-    background: transparent, linear-gradient(to bottom, transparent 37%, #eaeaea 37%);
-    padding: 45px 0 101px;
+    background: transparent, linear-gradient(to bottom, transparent 57%, #eaeaea 57%);
+    padding-top: 44px;
+    padding-bottom: 98px;
+  }
+
+  @media (min-width: $desktop) {
+    background: none, linear-gradient(to bottom, transparent 29%, #eaeaea 29%);
+    padding-top: 58px;
+    padding-bottom: 68px;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 98px;
   }
 }
 
@@ -17,8 +37,12 @@
     margin-bottom: 60px;
   }
 
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    grid-column: 1 / -1;
+  }
+
   @media (min-width: $desktop) {
-    margin-bottom: 146px;
+    margin-bottom: 144px;
   }
 }
 
@@ -30,27 +54,65 @@
     margin-bottom: 55px;
   }
 
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    grid-column: 1 / -1;
+  }
+
   @media (min-width: $desktop) {
-    margin-bottom: 69px;
+    margin-bottom: 70px;
+    padding-right: 128px;
   }
 }
 
 .example__list {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    justify-content: start;
+    margin-bottom: 0;
+  }
 
   @media (min-width: $desktop) {
-    margin-bottom: 55px;
+    margin-bottom: 40px;
   }
 }
 
 .example__price {
   @include font($size-basic, $size-medium, $color-main, $font-second);
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 20px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-medium);
+    @include font-min($size-medium, $size-big);
+    text-align: end;
     margin-bottom: 0;
+    padding-top: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+    display: flex;
+    padding-top: 0;
+  }
+}
+
+.example__price-number {
+  @media (min-width: $desktop) {
+    margin: 0 auto 0 66px;
+  }
+}
+
+.example__slider {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    margin-top: 95px;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / -1;
+    grid-row: 1/5;
   }
 }

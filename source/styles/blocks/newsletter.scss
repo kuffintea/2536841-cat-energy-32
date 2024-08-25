@@ -1,12 +1,15 @@
 .newsletter {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 42px;
 
   @media (min-width: $tablet) {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: $desktop) {
-    padding: 96px 0 104px;
+    padding-top: 93px;
+    padding-bottom: 104px;
   }
 }
 
@@ -17,20 +20,45 @@
   @media (min-width: $tablet) {
     @include font-min($size-big-2, $size-big-2);
     margin-bottom: 66px;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop) {
     @include font-min($size-huge, $size-huge);
     margin-bottom: 72px;
+    padding: 0;
   }
 }
 
 .newsletter__text {
   @include font($size-basic-2, $size-medium-2, $color-main, $font-second);
+  text-align: center;
   margin-bottom: 24px;
 
   @media (min-width: $tablet) {
     @include font-min($size-medium-2, $size-big-2);
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 756px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+}
+
+.newsletter__form {
+  @media (min-width: $tablet) {
+    padding: 0 40px;
+    display: flex;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 756px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
   }
 }
 
