@@ -3,25 +3,26 @@
   display: flex;
   align-items: center;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     @include pseudo-element(27px, 34px);
     @include mask;
-  }
-
-  &:is(:hover, :active, :focus-visible, :focus)::after {
-    background-color: $color-accent;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 
   &--htmlacademy::after {
     mask-image: url("../../icons/stack.svg#logo-htmlacademy");
   }
 
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    background-color: $color-accent;
+  }
+
   @media (min-width: $tablet) {
     @include font-min($size-basic-2, $size-medium);
+    max-width: 168px;
   }
 }
 

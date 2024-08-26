@@ -2,7 +2,7 @@
   @include font($size-medium, $size-big, $color-basic, $font-second);
   text-transform: uppercase;
   padding: 12px;
-  border: 1px solid $color-border-light;
+  border: 1px solid $color-border-light-2;
   width: 100%;
 
   &:hover {
@@ -13,8 +13,8 @@
     border-color: $color-basic;
   }
 
-  &--error,
-  &--error:is(:hover, :focus-visible, :focus) {
+  &:user-invalid,
+  &:user-invalid:is(:hover, :focus-visible, :focus) {
     border-color: $color-error;
   }
 }

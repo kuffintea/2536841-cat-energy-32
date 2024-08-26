@@ -22,7 +22,7 @@
   }
 
   @media (min-width: $desktop) {
-    max-width: 40%;
+    max-width: 45%;
   }
 }
 
@@ -32,11 +32,11 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    gap: 28px;
+    gap: 10px 36px;
   }
 
   @media (min-width: $desktop) {
-    gap: 34px;
+    gap: 10px 34px;
   }
 }
 
@@ -58,7 +58,7 @@
 
   @media (min-width: $tablet) {
     @include font-min($size-basic-3, $size-medium-2);
-    padding: 14px 3px 8px;
+    padding: 14px 0 8px;
     border-bottom: 2px solid transparent;
 
     &--current {

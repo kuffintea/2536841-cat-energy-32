@@ -1,12 +1,12 @@
 .promo {
   @include font($size-basic, $size-basic, $color-light, $font-second);
-  @include main-accent(60%, 60%, "cat-mobile@1x.png", to bottom);
+  @include accent-gradient(60%, 60%, "cat-mobile@1x.png", to bottom);
   background-size: contain, auto 60%;
   padding-top: 27px;
   padding-bottom: 20px;
 
   @media (min-resolution: 2dppx) {
-    @include main-accent(60%, 60%, "cat-mobile@2x.png", to bottom);
+    @include accent-gradient(60%, 60%, "cat-mobile@2x.png", to bottom);
   }
 
   @media (max-width: ($tablet - 1px)) {
@@ -23,14 +23,14 @@
   }
 
   @media (min-width: $desktop) {
-    @include main-accent(50%, 50%, "cat-desktop@1x.png");
+    @include accent-gradient(50%, 50%, "cat-desktop@1x.png");
     background-position: top right;
     margin-bottom: 86px;
     padding-top: 225px;
     padding-bottom: 182px;
 
     @media (min-resolution: 2dppx) {
-      @include main-accent(50%, 50%, "cat-desktop@2x.png");
+      @include accent-gradient(50%, 50%, "cat-desktop@2x.png");
       background-position: top right;
     }
   }
@@ -80,7 +80,7 @@
 
   @media (min-width: $desktop) {
     grid-column: 1/2;
-    margin: 0 80px 52px;
+    margin: 0 80px 50px;
   }
 }
 
@@ -108,6 +108,7 @@
     @include font-min($size-medium, $size-medium-3);
     padding: 14px 26px;
     grid-column: 1/2;
+    max-width: 244px;
   }
 
   @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {

@@ -1,5 +1,5 @@
 .programs-card {
-  padding: 22px 20px 18px 10px;
+  padding: 23px 20px 18px 10px;
   background-color: $color-special-light;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -20,6 +20,7 @@
 
   &::before {
     @include pseudo-element(67px, 50px);
+    @include background;
 
     @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
       width: 268px;
@@ -95,10 +96,11 @@
   align-items: center;
 
   &::after {
-    @include pseudo-element(24px, 10px);
+    @include pseudo-element(24px, 12px);
     background-image: url("../../icons/stack.svg#arrow");
-    margin-left: 15px;
-    transition: all 0.3s linear;
+    margin-left: 16px;
+    transform-origin: left center;
+    transition: transform 0.3s linear;
 
     @media (min-width: $tablet) {
       margin-left: 26px;
@@ -107,7 +109,6 @@
 
   &:is(:hover, :active, :focus-visible, :focus)::after {
     transform: scaleX(1.35);
-    transform-origin: left;
   }
 
   &:active {

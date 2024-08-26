@@ -1,5 +1,6 @@
 .more {
   text-align: center;
+  margin-top: auto;
   padding: 21px 0 23px;
   border-bottom: 1px solid $color-border-light-2;
   flex-basis: 230px;
@@ -7,13 +8,14 @@
 
   &::before {
     @include pseudo-element(30px, 30px);
+    @include background;
     background-image: url("../../icons/stack.svg#plus");
     margin: 0 auto 25px;
 
     @media (min-width: $tablet) {
+      margin-bottom: 48px;
       width: 60px;
       height: 60px;
-      margin-bottom: 48px;
     }
 
     @media (min-width: $desktop) {

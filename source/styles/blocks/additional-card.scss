@@ -38,18 +38,19 @@
 
 .additional-card__price {
   line-height: $size-basic;
-  display: flex;
   margin: 0;
   margin-bottom: 15px;
+  display: flex;
 
   @media (min-width: $tablet) {
     line-height: $size-medium;
-    justify-content: end;
     margin-bottom: 0;
+    justify-content: end;
   }
 }
 
 .additional-card__price-number {
+  text-wrap: nowrap;
   margin-left: auto;
 
   @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {

@@ -28,9 +28,9 @@
 
 .stats__description {
   @include font($size-small, $size-small);
-  transform: translateY(-40%);
   margin: 0 25px 0 20px;
   background-color: $color-special-light-2;
+  transform: translateY(-40%);
 
   @media (min-width: $tablet) {
     @include font-min($size-basic, $size-basic);

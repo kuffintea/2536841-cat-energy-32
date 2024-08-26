@@ -1,15 +1,16 @@
 .advantages-card {
-  position: relative;
   counter-increment: advantage-number;
+  position: relative;
 
   &::before {
     @include pseudo-element(60px, 60px, $color-accent);
+    @include background;
     background-size: 30px 32px;
 
     @media (min-width: $tablet) {
+      margin-bottom: 31px;
       width: 80px;
       height: 80px;
-      margin-bottom: 31px;
     }
   }
 
