@@ -26,8 +26,8 @@
 
   @media (max-width: ($tablet - 1px)) {
     & > *:not(:last-child) {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
+      margin-bottom: 21px;
+      padding-bottom: 18px;
       border-bottom: 1px solid $color-border-medium;
     }
   }

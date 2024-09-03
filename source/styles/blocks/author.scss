@@ -1,5 +1,5 @@
 .author {
-  @include font($size-basic-2, $size-medium, $color-basic);
+  @include font($size-basic-2, 1.25, $color-basic);
   display: flex;
   align-items: center;
 
@@ -21,7 +21,7 @@
   }
 
   @media (min-width: $tablet) {
-    @include font-min($size-basic-2, $size-medium);
+    @include font-min($size-basic-2, 1.25);
     max-width: 168px;
   }
 }

@@ -1,5 +1,5 @@
 .gift {
-  @include font($size-basic-2, $size-medium, $color-light);
+  @include font($size-basic-2, 1.25, $color-light);
   @include banner-gradient("cat-in-bag-mobile@1x.png");
   @include background(cover);
   text-align: center;

@@ -18,11 +18,11 @@
 }
 
 .advantages__title {
-  @include font($size-big-3, $size-huge, $color-main, $font-second);
+  @include font($size-big-3, 1.1, $color-main, $font-second);
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-huge-2, $size-huge-2);
+    @include font-min($size-huge-2);
     margin-bottom: 72px;
   }
 }
@@ -33,11 +33,11 @@
   gap: 20px;
 
   @media (min-width: $tablet) {
-    grid-template-columns: repeat(auto-fill, minmax(230px, 250px));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 248px));
     gap: 134px;
   }
 
   @media (min-width: $desktop) {
-    gap: 111px 73px;
+    gap: 111px 76px;
   }
 }

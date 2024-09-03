@@ -35,11 +35,15 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 20px;
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: $tablet) {
     &::after {
-      @include font(280px, 280px, $color-special-light, $font-second);
+      @include font(280px, 1, $color-special-light, $font-second);
       @include pseudo-element(112px, 280px);
       content: counter(advantage-number);
       position: absolute;

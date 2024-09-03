@@ -1,8 +1,8 @@
 .page__body {
-  @include font($size-basic, $size-basic-3, $color-basic);
+  @include font($size-basic, 1.3, $color-basic);
   margin: 0;
 
   @media (min-width: $tablet) {
-    @include font-min($size-basic-2, $size-medium-2);
+    @include font-min($size-basic-2, 1.5);
   }
 }

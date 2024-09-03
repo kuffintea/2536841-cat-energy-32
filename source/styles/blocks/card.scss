@@ -1,7 +1,7 @@
 .card {
   padding: 20px 0 26px;
-  flex-basis: 230px;
   flex-grow: 1;
+  max-width: 350px;
 
   @media (max-width: ($tablet - 1px)) {
     border-bottom: 1px solid $color-border-light-2;
@@ -13,37 +13,37 @@
     text-align: center;
     padding: 10px 37px 41px;
     background-image: linear-gradient(to bottom, transparent 81px, $color-special-light 81px);
-    flex-basis: 260px;
+    flex-basis: calc(100% / 2 - 40px);
   }
 
   @media (min-width: $desktop) {
     padding: 10px 37px 41px;
-    flex-basis: 245px;
+    flex-basis: calc(100% / 4 - 60px);
   }
 }
 
 .card__link:has(.card__image) {
   grid-row: 1/3;
-}
 
-.card__image {
   @media (min-width: $tablet) {
     margin-bottom: 16px;
+    display: block;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 }
 
+
 .card__title {
-  @include font($size-basic-2, $size-medium, $color-special-dark, $font-second);
+  @include font($size-basic-2, 1.25, $color-special-dark, $font-second);
   text-transform: uppercase;
   margin-bottom: 14px;
   padding-right: 40%;
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-medium-2);
+    @include font-min($size-medium, 1.2);
     margin-bottom: 15px;
     padding: 0 22%;
   }
@@ -68,12 +68,12 @@
 }
 
 .card__info-item {
-  @include font($size-small, $size-basic-2);
+  @include font($size-small, 1.33);
   display: flex;
   justify-content: space-between;
 
   @media (min-width: $tablet) {
-    @include font-min($size-basic-2, $size-medium);
+    @include font-min($size-basic-2, 1.25);
     padding: 5px 0;
     border-bottom: 1px solid $color-border-light-2;
   }

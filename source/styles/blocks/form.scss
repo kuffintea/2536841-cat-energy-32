@@ -1,5 +1,5 @@
 .form__field {
-  @include font($size-medium, $size-big, $color-basic, $font-second);
+  @include font($size-medium, 1.5, $color-basic, $font-second);
   text-transform: uppercase;
   padding: 12px;
   border: 1px solid $color-border-light-2;

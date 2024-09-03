@@ -18,7 +18,7 @@
   margin-bottom: 0;
 }
 
-@mixin font-min($font-size, $line-height) {
+@mixin font-min($font-size, $line-height: 1) {
   font-size: $font-size;
   line-height: $line-height;
 }
@@ -58,4 +58,21 @@
   background: linear-gradient($direction, rgba($color-accent, 0.85) $color1-percent, $color-light $color2-percent), url("../../images/" + $image-name) no-repeat top;
   background-color: $color-basic;
   background-size: contain;
+}
+
+@mixin heading-lines {
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50vw;
+    height: 2px;
+    transform: translateY(-50%);
+    background-color: $color-accent;
+    box-shadow: -50vw 0 $color-accent, 50vw 0 $color-accent;
+    z-index: -1;
+  }
 }

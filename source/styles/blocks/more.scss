@@ -3,8 +3,8 @@
   margin-top: auto;
   padding: 21px 0 23px;
   border-bottom: 1px solid $color-border-light-2;
-  flex-basis: 230px;
   flex-grow: 1;
+  max-width: 350px;
 
   &::before {
     @include pseudo-element(30px, 30px);
@@ -27,21 +27,21 @@
     padding: 52px 37px 40px;
     border-bottom: 0;
     box-shadow: 0 0 0 1px $color-special-light;
-    flex-basis: 260px;
+    flex-basis: calc(100% / 2 - 40px);
   }
 
   @media (min-width: $desktop) {
-    flex-basis: 245px;
+    flex-basis: calc(100% / 4 - 60px);
   }
 }
 
 .more__text {
-  @include font($size-basic-2, $size-medium, $color-special-dark-2, $font-second);
+  @include font($size-basic-2, 1.25, $color-special-dark-2, $font-second);
   text-transform: uppercase;
   margin-bottom: 8px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-medium-2);
+    @include font-min($size-medium, 1.2);
     margin-bottom: 23px;
     padding: 0 40px;
   }
@@ -53,11 +53,11 @@
 }
 
 .more__description {
-  @include font($size-small, $size-basic-2);
+  @include font($size-small, 1.33);
   margin-bottom: 21px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-basic-2, $size-basic-3);
+    @include font-min($size-basic-2, 1.13);
     margin-bottom: 82px;
     padding: 0 40px;
   }

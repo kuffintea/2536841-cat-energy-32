@@ -1,5 +1,5 @@
 .example {
-  padding-top: 25px;
+  padding-top: 27px;
   padding-bottom: 40px;
   background-color: $color-special-light-2;
 
@@ -29,11 +29,11 @@
 }
 
 .example__title {
-  @include font($size-big-3, $size-huge, $color-main, $font-second);
+  @include font($size-big-3, 1.1, $color-main, $font-second);
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-huge-2, $size-huge-2);
+    @include font-min($size-huge-2);
     margin-bottom: 60px;
   }
 
@@ -66,7 +66,7 @@
 
 .example__list {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   justify-content: center;
 
   @media (min-width: $tablet) {
@@ -75,18 +75,18 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
 
 .example__price {
-  @include font($size-basic, $size-medium, $color-main, $font-second);
+  @include font($size-basic, 1.43, $color-main, $font-second);
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-big);
+    @include font-min($size-medium, 1.5);
     text-align: end;
     margin-bottom: 0;
     padding-top: 6px;
@@ -107,7 +107,7 @@
 
 .example__slider {
   @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-    margin-top: 95px;
+    margin-top: 102px;
     grid-column: 1 / -1;
   }
 

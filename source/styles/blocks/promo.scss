@@ -1,5 +1,5 @@
 .promo {
-  @include font($size-basic, $size-basic, $color-light, $font-second);
+  @include font($size-basic, 1, $color-light, $font-second);
   @include accent-gradient(60%, 60%, "cat-mobile@1x.png", to bottom);
   background-size: contain, auto 60%;
   padding-top: 27px;
@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $tablet) {
-    @include font($size-medium, $size-medium, $color-main, $font-second);
+    @include font($size-medium, 1, $color-main, $font-second);
     padding-top: 50px;
     padding-bottom: 524px;
     background-image: none;
@@ -47,11 +47,11 @@
 }
 
 .promo__title {
-  @include font($size-big-3, $size-big-3, $color-light, $font-second);
+  @include font($size-big-3, 1, $color-light, $font-second);
   margin-bottom: 25px;
 
   @media (min-width: $tablet) {
-    @include font($size-huge-2, $size-huge-2, $color-main, $font-second);
+    @include font($size-huge-2, 1, $color-main, $font-second);
     margin: 0 90px 40px;
   }
 
@@ -105,7 +105,7 @@
 
 .promo__link {
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-medium-3);
+    @include font-min($size-medium, 1.3);
     padding: 14px 26px;
     grid-column: 1/2;
     max-width: 244px;

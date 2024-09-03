@@ -26,12 +26,12 @@
 }
 
 .additional-card__title {
-  @include font($size-basic-2, $size-basic-2, $color-special-dark, $font-second);
+  @include font($size-basic-2, 1, $color-special-dark, $font-second);
   text-transform: uppercase;
   margin-bottom: 13px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-medium);
+    @include font-min($size-medium);
     margin-bottom: 0;
   }
 }

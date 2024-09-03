@@ -51,17 +51,17 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 41px 61px 55px 35px;
-    gap: 23px 47px;
+    padding: 43px 61px 55px 35px;
+    gap: 23px 44px;
   }
 }
 
 .programs-card__title {
-  @include font($size-medium-2, $size-big-3, $color-main, $font-second);
+  @include font($size-medium-2, 1.5, $color-main, $font-second);
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    @include font-min($size-big-3, $size-big-3);
+    @include font-min($size-big-3);
   }
 }
 
@@ -89,7 +89,7 @@
 }
 
 .programs-card__link {
-  @include font($size-basic-2, $size-basic-2, $color-main, $font-second);
+  @include font($size-basic-2, 1, $color-main, $font-second);
   text-transform: uppercase;
   padding: 4px 0;
   display: flex;
@@ -116,13 +116,13 @@
   }
 
   @media (max-width: ($tablet - 1px)) {
-    padding-top: 20px;
+    padding-top: 18px;
     border-top: 1px solid $color-border-medium;
     margin-left: 10px;
   }
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-big);
+    @include font-min($size-medium, 1.5);
   }
 
   @media (max-width: ($tablet - 1px)) or (min-width: $desktop) {
