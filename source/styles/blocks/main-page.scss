@@ -1,23 +1,25 @@
-.main-page {
-  &--catalog {
-    padding-top: 27px;
+.page__body--catalog .main-page {
+  padding-top: 27px;
 
-    @media (min-width: $tablet) {
-      padding-top: 65px;
-    }
+  @media (min-width: $tablet) {
+    padding-top: 50px;
+  }
 
-    @media (min-width: $desktop) {
-      padding-top: 74px;
-    }
+  @media (min-width: $desktop) {
+    padding-top: 60px;
   }
 }
 
 .main-page__title {
-  @include font($size-big-3, $size-big-3, $color-main, $font-second);
-  margin-bottom: 41px;
+  @include font($size-big-3, 1, $color-main, $font-second);
+
+  @media (max-width: ($tablet - 1px)) {
+    padding-bottom: 42px;
+    border-bottom: 1px solid $color-border-light-2;
+  }
 
   @media (min-width: $tablet) {
-    @include font-min($size-huge-2, $size-huge-2);
+    @include font-min($size-huge-2);
     margin-bottom: 84px;
   }
 }

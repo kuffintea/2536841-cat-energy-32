@@ -6,23 +6,39 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 71px;
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 0 77px;
   }
 }
 
 .additional__title {
-  @include font($size-medium-2, $size-medium-2, $color-main, $font-second);
+  @include font($size-medium-2, 1, $color-main, $font-second);
+  @include heading-lines;
   margin-bottom: 36px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-big-2, $size-big-2);
+    @include font-min($size-big-2);
     margin-bottom: 80px;
+    padding: 0 40px;
   }
+
+  @media (min-width: $desktop) {
+    @include font-min($size-huge);
+    padding: 0;
+    grid-column: 1/-1;
+  }
+}
+
+.additional__title-text {
+  background-color: $color-light;
+  box-shadow: -40px 0 $color-light, 40px 0 $color-light;
 }
 
 .additional__list {
   @include list;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
 
   @media (min-width: $tablet) {
     margin-bottom: 70px;

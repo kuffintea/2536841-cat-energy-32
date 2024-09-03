@@ -1,36 +1,70 @@
 .newsletter {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 42px;
 
   @media (min-width: $tablet) {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: $desktop) {
-    padding: 96px 0 104px;
+    padding-top: 93px;
+    padding-bottom: 105px;
   }
 }
 
 .newsletter__title {
-  @include font($size-medium-2, $size-medium-2, $color-main, $font-second);
+  @include font($size-medium-2, 1, $color-main, $font-second);
+  @include heading-lines;
   margin-bottom: 32px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-big-2, $size-big-2);
+    @include font-min($size-big-2);
     margin-bottom: 66px;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop) {
-    @include font-min($size-huge, $size-huge);
+    @include font-min($size-huge);
     margin-bottom: 72px;
+    padding: 0;
   }
 }
 
+.newsletter__title-text {
+  background-color: $color-light;
+  box-shadow: -40px 0 $color-light, 40px 0 $color-light;
+}
+
 .newsletter__text {
-  @include font($size-basic-2, $size-medium-2, $color-main, $font-second);
+  @include font($size-basic-2, 1.5, $color-main, $font-second);
+  text-align: center;
   margin-bottom: 24px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium-2, $size-big-2);
+    @include font-min($size-medium-2, 1.33);
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    max-width: 756px;
+  }
+}
+
+.newsletter__form {
+  @media (min-width: $tablet) {
+    padding: 0 40px;
+    display: flex;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    max-width: 756px;
   }
 }
 

@@ -1,3 +1,9 @@
 .programs__list {
   @include list;
+
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }

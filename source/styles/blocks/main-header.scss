@@ -1,12 +1,40 @@
 .main-header {
-  display: flex;
-  position: relative;
-  padding: 13px 0 15px;
+  padding-top: 13px;
+  padding-bottom: 15px;
   border-bottom: 1px solid $color-border-light;
+  position: relative;
+  display: flex;
+
+  @media (max-width: ($tablet - 1px)) {
+    &--nojs {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--nojs .main-header__link {
+      padding-top: 13px;
+      padding-right: 24px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $color-border-light;
+    }
+
+    &--nojs .main-nav {
+      position: static;
+      height: auto;
+    }
+
+    &--nojs .main-header__toggle {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet) {
-    padding: 25px 0 0;
+    padding-top: 25px;
     border-bottom: none;
+    align-items: start;
   }
 
   @media (min-width: $desktop) {
@@ -14,12 +42,23 @@
   }
 }
 
+.page__body--index .main-header {
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+}
+
 .main-header__toggle {
-  background: transparent url("../../icons/stack.svg#menu") no-repeat center;
-  background-size: 24px;
-  border: none;
   margin: 0;
-  padding: 12px;
+  margin-left: 8px;
+  padding: 14px;
+  border: none;
+  background: transparent url("../../icons/stack.svg#menu") no-repeat center right;
+  background-size: 24px;
   cursor: pointer;
 
   &:is(:hover, :focus-visible, :focus) {
@@ -35,7 +74,7 @@
   }
 }
 
-.main-nav.show + .main-header__toggle {
+.main-nav--show + .main-header__toggle {
   background-image: url("../../icons/stack.svg#cross");
   background-size: 18px;
 }

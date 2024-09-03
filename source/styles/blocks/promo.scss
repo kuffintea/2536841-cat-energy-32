@@ -1,33 +1,67 @@
 .promo {
-  @include font($size-basic, $size-basic, $color-light, $font-second);
-  background-image: linear-gradient(to bottom, rgba($color-accent, 0.85) 60%, transparent 60%);
-  padding: 27px 0 20px;
+  @include font($size-basic, 1, $color-light, $font-second);
+  @include accent-gradient(60%, 60%, "cat-mobile@1x.png", to bottom);
+  background-size: contain, auto 60%;
+  padding-top: 27px;
+  padding-bottom: 20px;
+
+  @media (min-resolution: 2dppx) {
+    @include accent-gradient(60%, 60%, "cat-mobile@2x.png", to bottom);
+  }
 
   @media (max-width: ($tablet - 1px)) {
     text-align: center;
   }
 
   @media (min-width: $tablet) {
-    @include font($size-medium, $size-medium, $color-main, $font-second);
-    padding: 65px 0 0;
+    @include font($size-medium, 1, $color-main, $font-second);
+    padding-top: 50px;
+    padding-bottom: 524px;
     background-image: none;
+    background-color: transparent;
+    position: relative;
   }
 
   @media (min-width: $desktop) {
-    margin-top: -114px;
-    margin-bottom: 82px;
-    padding-top: 179px;
-    background-image: linear-gradient(to left, rgba($color-accent, 0.85) 58%, transparent 58%);
+    @include accent-gradient(50%, 50%, "cat-desktop@1x.png");
+    background-position: top right;
+    margin-bottom: 86px;
+    padding-top: 225px;
+    padding-bottom: 182px;
+
+    @media (min-resolution: 2dppx) {
+      @include accent-gradient(50%, 50%, "cat-desktop@2x.png");
+      background-position: top right;
+    }
+  }
+}
+
+.promo__wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .promo__title {
-  @include font($size-big-3, $size-big-3, $color-light, $font-second);
+  @include font($size-big-3, 1, $color-light, $font-second);
   margin-bottom: 25px;
 
   @media (min-width: $tablet) {
-    @include font($size-huge-2, $size-huge-2, $color-main, $font-second);
-    margin-bottom: 40px;
+    @include font($size-huge-2, 1, $color-main, $font-second);
+    margin: 0 90px 40px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    order: -1;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1/2;
+    margin: 0 80px 40px;
   }
 }
 
@@ -37,11 +71,16 @@
   margin-bottom: 29px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 50px;
+    margin: 0 90px 50px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    order: -1;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 52px;
+    grid-column: 1/2;
+    margin: 0 80px 50px;
   }
 }
 
@@ -49,14 +88,35 @@
   display: block;
   margin: 0 auto 3px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    transform: translate(-30%, -48%);
   }
 }
 
 .promo__link {
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-medium-3);
+    @include font-min($size-medium, 1.3);
     padding: 14px 26px;
+    grid-column: 1/2;
+    max-width: 244px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    margin: 0 auto 0 90px;
+    order: -1;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 auto 0 80px;
   }
 }

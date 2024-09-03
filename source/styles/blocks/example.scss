@@ -1,20 +1,44 @@
 .example {
+  padding-top: 27px;
+  padding-bottom: 40px;
   background-color: $color-special-light-2;
-  padding: 25px 0 40px;
 
   @media (min-width: $tablet) {
-    background: transparent, linear-gradient(to bottom, transparent 37%, #eaeaea 37%);
-    padding: 45px 0 101px;
+    padding-top: 44px;
+    padding-bottom: 98px;
+    background: transparent, linear-gradient(to bottom, transparent 57%, #eaeaea 57%);
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 58px;
+    padding-bottom: 68px;
+    background: none, linear-gradient(to bottom, transparent 30%, #eaeaea 30%);
+  }
+}
+
+.example__wrapper {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 190px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 98px;
   }
 }
 
 .example__title {
-  @include font($size-big-3, $size-huge, $color-main, $font-second);
+  @include font($size-big-3, 1.1, $color-main, $font-second);
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-huge-2, $size-huge-2);
+    @include font-min($size-huge-2);
     margin-bottom: 60px;
+  }
+
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    grid-column: 1 / -1;
   }
 
   @media (min-width: $desktop) {
@@ -24,33 +48,71 @@
 
 .example__text {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet) {
     margin-bottom: 55px;
   }
 
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    grid-column: 1 / -1;
+  }
+
   @media (min-width: $desktop) {
-    margin-bottom: 69px;
+    margin-bottom: 70px;
+    padding-right: 128px;
   }
 }
 
 .example__list {
   margin: 0;
   margin-bottom: 20px;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    justify-content: start;
+  }
 
   @media (min-width: $desktop) {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 }
 
 .example__price {
-  @include font($size-basic, $size-medium, $color-main, $font-second);
+  @include font($size-basic, 1.43, $color-main, $font-second);
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 20px;
 
   @media (min-width: $tablet) {
-    @include font-min($size-medium, $size-medium);
+    @include font-min($size-medium, 1.5);
+    text-align: end;
     margin-bottom: 0;
+    padding-top: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: start;
+    padding-top: 0;
+    display: flex;
+  }
+}
+
+.example__price-number {
+  @media (min-width: $desktop) {
+    margin: 0 auto 0 66px;
+  }
+}
+
+.example__slider {
+  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    margin-top: 102px;
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / -1;
+    grid-row: 1/5;
   }
 }
