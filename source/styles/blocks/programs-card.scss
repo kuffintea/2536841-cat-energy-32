@@ -112,6 +112,10 @@
   }
 
   &:active {
+    color: rgba($color-main, 0.3);
+  }
+
+  &:active::after {
     opacity: 0.3;
   }
 
