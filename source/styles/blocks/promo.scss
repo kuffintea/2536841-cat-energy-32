@@ -1,13 +1,9 @@
 .promo {
   @include font($size-basic, 1, $color-light, $font-second);
-  @include accent-gradient(60%, 60%, "cat-mobile@1x.png", to bottom);
+  @include accent-gradient(60%, 60%, "cat-mobile", to bottom);
   background-size: contain, auto 60%;
   padding-top: 27px;
   padding-bottom: 20px;
-
-  @media (min-resolution: 2dppx) {
-    @include accent-gradient(60%, 60%, "cat-mobile@2x.png", to bottom);
-  }
 
   @media (max-width: ($tablet - 1px)) {
     text-align: center;
@@ -23,14 +19,13 @@
   }
 
   @media (min-width: $desktop) {
-    @include accent-gradient(50%, 50%, "cat-desktop@1x.png");
+    @include accent-gradient(50%, 50%, "cat-desktop");
     background-position: top right;
     margin-bottom: 86px;
     padding-top: 225px;
     padding-bottom: 182px;
 
     @media (min-resolution: 2dppx) {
-      @include accent-gradient(50%, 50%, "cat-desktop@2x.png");
       background-position: top right;
     }
   }

@@ -1,10 +1,27 @@
 .card {
-  padding: 20px 0 26px;
-  flex-grow: 1;
+  @media (max-width: ($tablet - 1px)) {
+    border-bottom: 1px solid $color-border-light-2;
+  }
+
+  @media (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media (min-width: 1200px) {
+    flex-basis: calc((100% - (60px * 2)) / 3);
+  }
+
+  @media (min-width: $desktop) {
+    flex-basis: calc((100% - (80px * 3)) / 4);
+  }
+}
+
+.card__wrapper {
+  padding: 20px 20px 26px;
+  margin: 0 auto;
   max-width: 350px;
 
   @media (max-width: ($tablet - 1px)) {
-    border-bottom: 1px solid $color-border-light-2;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -13,12 +30,6 @@
     text-align: center;
     padding: 10px 37px 41px;
     background-image: linear-gradient(to bottom, transparent 81px, $color-special-light 81px);
-    flex-basis: calc(100% / 2 - 40px);
-  }
-
-  @media (min-width: $desktop) {
-    padding: 10px 37px 41px;
-    flex-basis: calc(100% / 4 - 60px);
   }
 }
 

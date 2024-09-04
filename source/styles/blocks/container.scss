@@ -1,8 +1,24 @@
 .container {
   padding: 0 20px;
 
+  @media (max-width: ($tablet - 1px)) {
+    &--md {
+      padding: 0;
+    }
+  }
+
   @media (min-width: $tablet) {
     padding: 0 30px;
+
+    &--narrow {
+      padding: 0 70px;
+    }
+  }
+
+  @media (max-width: ($desktop - 1px)) {
+    &--lg {
+      padding: 0;
+    }
   }
 
   @media (min-width: $desktop) {

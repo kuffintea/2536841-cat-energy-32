@@ -2,10 +2,8 @@
   background-color: $color-special-light;
 }
 
-.page__body--catalog .main-footer__contacts {
-  @media (max-width: ($desktop - 1px)) {
-    background-color: $color-special-light;
-  }
+.page__body--index .main-footer__contacts {
+  background-color: $color-light;
 }
 
 .main-footer__wrapper {

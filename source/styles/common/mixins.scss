@@ -51,11 +51,11 @@
 }
 
 @mixin banner-gradient($image-name) {
-  background-image: linear-gradient(rgba($color-accent, 0.85), rgba($color-accent, 0.85)), url("../../images/"+ $image-name);
+  background-image: linear-gradient(rgba($color-accent, 0.85), rgba($color-accent, 0.85)), image-set(url("../../images/" + $image-name + "@1x.wepb") type("image/wepb") 1x, url("../../images/" + $image-name + "@2x.wepb") type("image/wepb") 2x, url("../../images/" + $image-name + "@1x.jpg") type("image/jpg") 1x, url("../../images/" + $image-name + "@2x.jpg") type("image/jpg") 2x);
 }
 
 @mixin accent-gradient($color1-percent, $color2-percent, $image-name, $direction: to left) {
-  background: linear-gradient($direction, rgba($color-accent, 0.85) $color1-percent, $color-light $color2-percent), url("../../images/" + $image-name) no-repeat top;
+  background: linear-gradient($direction, rgba($color-accent, 0.85) $color1-percent, $color-light $color2-percent), image-set(url("../../images/" + $image-name + "@1x.wepb") type("image/wepb") 1x, url("../../images/" + $image-name + "@2x.wepb") type("image/wepb") 2x, url("../../images/" + $image-name + "@1x.jpg") type("image/jpg") 1x, url("../../images/" + $image-name + "@2x.jpg") type("image/jpg") 2x) no-repeat top;
   background-color: $color-basic;
   background-size: contain;
 }

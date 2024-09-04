@@ -6,13 +6,13 @@
   @media (min-width: $tablet) {
     padding-top: 44px;
     padding-bottom: 98px;
-    background: transparent, linear-gradient(to bottom, transparent 57%, #eaeaea 57%);
+    background: transparent, linear-gradient(to bottom, transparent 57%, $color-special-light-2 57%);
   }
 
   @media (min-width: $desktop) {
     padding-top: 58px;
     padding-bottom: 68px;
-    background: none, linear-gradient(to bottom, transparent 30%, #eaeaea 30%);
+    background: none, linear-gradient(to bottom, transparent 30%, $color-special-light 30%);
   }
 }
 

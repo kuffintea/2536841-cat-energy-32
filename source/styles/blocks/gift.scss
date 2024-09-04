@@ -1,6 +1,6 @@
 .gift {
   @include font($size-basic-2, 1.25, $color-light);
-  @include banner-gradient("cat-in-bag-mobile@1x.png");
+  @include banner-gradient("cat-in-bag-mobile");
   @include background(cover);
   text-align: center;
   padding: 59px 0 43px;
@@ -21,16 +21,8 @@
     }
   }
 
-  @media (min-resolution: 2dppx) {
-    @include banner-gradient("cat-in-bag-mobile@2x.png");
-  }
-
   @media (min-width: $tablet) {
-    @include banner-gradient("cat-in-bag-tablet@1x.png");
-
-    @media (min-resolution: 2dppx) {
-      @include banner-gradient("cat-in-bag-tablet@2x.png");
-    }
+    @include banner-gradient("cat-in-bag-tablet");
   }
 
   @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
@@ -43,11 +35,7 @@
   }
 
   @media (min-width: $desktop) {
-    @include banner-gradient("cat-in-bag-desktop@1x.png");
-
-    @media (min-resolution: 2dppx) {
-      @include banner-gradient("cat-in-bag-desktop@2x.png");
-    }
+    @include banner-gradient("cat-in-bag-desktop");
   }
 }
 
