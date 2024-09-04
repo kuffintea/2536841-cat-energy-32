@@ -1,6 +1,4 @@
 .contacts {
-  background-color: $color-light;
-
   @media (min-width: $desktop) {
     display: grid;
     grid-template-rows: 92px auto 101px;

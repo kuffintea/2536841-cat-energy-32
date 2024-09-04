@@ -1,8 +1,76 @@
+.form__wrapper {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &--program {
+    border-top: 1px solid $color-border-medium;
+    border-bottom: 1px solid $color-border-medium;
+
+    @media (min-width: $tablet) {
+      border-left: 1px solid $color-border-medium;
+      border-right: 1px solid $color-border-medium;
+    }
+  }
+
+  &--contacts .form__title {
+    margin-bottom: 35px;
+  }
+
+  &--comment .form__title {
+    margin-bottom: 38px;
+  }
+
+  &--additional .form__title {
+    margin-bottom: 34px;
+  }
+}
+
+.form__title {
+  @include font($size-medium-2, 1.1, $color-main, $font-second);
+  @include heading-lines;
+  padding: 0;
+  display: block;
+}
+
+.form__title-text {
+  background-color: $color-light;
+  box-shadow: -40px 0 $color-light, 40px 0 $color-light;
+  display: inline-block;
+}
+
+.form__label {
+  @include font($size-basic-2, 1.13, $color-basic, $font-second);
+  text-wrap: nowrap;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &:has(+ .form__group) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $tablet) {
+    @include font-min($size-medium, 1.5);
+
+    &:has(+ .form__group) {
+      margin-bottom: 72px;
+    }
+  }
+}
+
 .form__field {
   @include font($size-medium, 1.5, $color-basic, $font-second);
   text-transform: uppercase;
   padding: 12px;
   border: 1px solid $color-border-light-2;
+  display: block;
   width: 100%;
 
   &:hover {
@@ -17,10 +85,65 @@
   &:user-invalid:is(:hover, :focus-visible, :focus) {
     border-color: $color-error;
   }
+
+  &--small {
+    @include font($size-basic-2, 1.13, $color-basic, $font-second);
+    padding: 13px 15px 12px;
+  }
+}
+
+.form__control {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color-border-medium-2;
+  background-color: $color-light;
+  flex-shrink: 0;
+  position: relative;
+  order: -1;
+
+  &::after {
+    @include pseudo-element(18px, 14px, $color-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--checkbox::after {
+    @include mask("check", $color-light);
+  }
+
+  &--radio {
+    border-radius: 50%;
+
+    &::after {
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
+
+.form__label:hover .form__control::after,
+.form__label input:is(:focus-visible, :focus) + .form__control::after {
+  background-color: rgba($color-accent, 0.3);
+}
+
+.form__label:active .form__control::after {
+  background-color: rgba($color-accent, 0.6);
+}
+
+.form__label input:checked + .form__control::after {
+  background-color: $color-accent;
 }
 
 .form__button {
   width: 100%;
+
+  &:has(+ .form__description) {
+    margin-bottom: 21px;
+  }
 
   @media (min-width: $tablet) {
     width: 65%;
@@ -29,4 +152,10 @@
   @media (min-width: $desktop) {
     width: 50%;
   }
+}
+
+.form__description {
+  @include font($size-basic, 1.14, $color-main, $font-basic);
+  text-align: center;
+  display: block;
 }
