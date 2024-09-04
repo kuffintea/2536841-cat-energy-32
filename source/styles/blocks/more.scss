@@ -1,9 +1,27 @@
 .more {
-  text-align: center;
   margin-top: auto;
-  padding: 21px 0 23px;
-  border-bottom: 1px solid $color-border-light-2;
-  flex-grow: 1;
+
+  @media (max-width: ($tablet - 1px)) {
+    border-bottom: 1px solid $color-border-light-2;
+  }
+
+  @media (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media (min-width: 1200px) {
+    flex-basis: calc((100% - (60px * 2)) / 3);
+  }
+
+  @media (min-width: $desktop) {
+    flex-basis: calc((100% - (80px * 3)) / 4);
+  }
+}
+
+.more__wrapper {
+  text-align: center;
+  margin: 0 auto;
+  padding: 21px 20px 23px;
   max-width: 350px;
 
   &::before {
@@ -25,13 +43,7 @@
 
   @media (min-width: $tablet) {
     padding: 52px 37px 40px;
-    border-bottom: 0;
     box-shadow: 0 0 0 1px $color-special-light;
-    flex-basis: calc(100% / 2 - 40px);
-  }
-
-  @media (min-width: $desktop) {
-    flex-basis: calc(100% / 4 - 60px);
   }
 }
 

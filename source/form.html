@@ -39,43 +39,45 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
   </header>
-  <main class="main-page container container--md">
-    <h1 class="main-page__title">Подбор программы</h1>
-    <p class="main-page__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
+  <main class="main-page">
+    <h1 class="main-page__title container container--narrow">Подбор программы</h1>
+    <p class="main-page__text container container--narrow">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
     <form class="main-page__form form" action="https://echo.htmlacademy.ru/" method="get">
-      <div class="form__wrapper form__wrapper--info">
-        <label class="form__label">
-          Имя:*
-          <input class="form__field form__field--small" name="cat-name" type="text" placeholder="Барсик" required>
-        </label>
-        <label class="form__label">
-          Вес (кг):*
-          <input class="form__field form__field--small" name="cat-weight" type="number" placeholder="7" required>
-        </label>
-        <label class="form__label">
-          Возраст (лет):
-          <input class="form__field form__field--small" name="cat-age" type="number" placeholder="7">
-        </label>
+      <div class="form__container container container--lg">
+        <div class="form__wrapper form__wrapper--info">
+          <label class="form__label">
+            Имя:*
+            <input class="form__field form__field--small" name="cat-name" type="text" placeholder="Барсик" required>
+          </label>
+          <label class="form__label">
+            Вес (кг):*
+            <input class="form__field form__field--small" name="cat-weight" type="number" placeholder="7" required>
+          </label>
+          <label class="form__label">
+            Возраст (лет):
+            <input class="form__field form__field--small" name="cat-age" type="number" placeholder="7">
+          </label>
+        </div>
+        <fieldset class="form__wrapper form__wrapper--program">
+          <legend class="visually-hidden">Программа</legend>
+          <label class="form__label">
+            Похудение
+            <input class="visually-hidden" name="program" value="diet" type="radio" checked>
+            <span class="form__control form__control--radio"></span>
+          </label>
+          <label class="form__label">
+            Набор массы
+            <input class="visually-hidden" name="program" value="gain" type="radio">
+            <span class="form__control form__control--radio"></span>
+          </label>
+          <label class="form__label">
+            Не знаю (нужен ваш совет)
+            <input class="visually-hidden" name="program" value="advice" type="radio">
+            <span class="form__control form__control--radio"></span>
+          </label>
+        </fieldset>
       </div>
-      <fieldset class="form__wrapper form__wrapper--program">
-        <legend class="visually-hidden">Программа</legend>
-        <label class="form__label">
-          Похудение
-          <input class="visually-hidden" name="program" value="diet" type="radio" checked>
-          <span class="form__control form__control--radio"></span>
-        </label>
-        <label class="form__label">
-          Набор массы
-          <input class="visually-hidden" name="program" value="gain" type="radio">
-          <span class="form__control form__control--radio"></span>
-        </label>
-        <label class="form__label">
-          Не знаю (нужен ваш совет)
-          <input class="visually-hidden" name="program" value="advice" type="radio">
-          <span class="form__control form__control--radio"></span>
-        </label>
-      </fieldset>
-      <fieldset class="form__wrapper form__wrapper--contacts">
+      <fieldset class="form__wrapper form__wrapper--contacts container container--narrow">
         <legend class="form__title">
           <span class="form__title-text">Контактные данные<br> (владельца кота)</span>
         </legend>
@@ -88,13 +90,13 @@
           <input class="form__field form__field--small" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
         </label>
       </fieldset>
-      <div class="form__wrapper form__wrapper--comment">
+      <div class="form__wrapper form__wrapper--comment container container--narrow">
         <label class="form__title" for="comment">
           <span class="form__title-text">Комментарий</span>
         </label>
         <textarea class="form__field form__field--small form__field--textarea" rows="6" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
-      <fieldset class="form__wrapper form__wrapper--additional">
+      <fieldset class="form__wrapper form__wrapper--additional container container--narrow">
         <legend class="form__title">
           <span class="form__title-text">Дополнительно</span>
         </legend>
@@ -119,8 +121,10 @@
           <span class="form__control form__control--checkbox"></span>
         </label>
       </fieldset>
-      <button class="form__button button button--accent" type="submit">Отправить заявку</button>
-      <span class="form__description">* — Обязательные поля</span>
+      <div class="form__container container container--narrow">
+        <button class="form__button button button--accent" type="submit">Отправить заявку</button>
+        <span class="form__description">* — Обязательные поля</span>
+      </div>
     </form>
   </main>
   <footer class="main-footer">

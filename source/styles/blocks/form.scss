@@ -1,4 +1,4 @@
-.page__body--form .form {
+.form__container {
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -12,9 +12,7 @@
 }
 
 .form__wrapper {
-  margin: 0;
   margin-bottom: 25px;
-  padding: 0;
   border: none;
 
   .form__title {
@@ -25,11 +23,14 @@
     margin-bottom: 32px;
   }
 
+  &--info {
+    padding: 0 20px;
+  }
+
   &--program {
     border-top: 1px solid $color-border-medium;
     border-bottom: 1px solid $color-border-medium;
-    padding-top: 19px;
-    padding-bottom: 19px;
+    padding: 19px 20px;
   }
 
   &--comment .form__field--textarea {
@@ -46,11 +47,14 @@
 
     &--info {
       margin-bottom: 74px;
+      padding: 0 70px;
     }
 
     &--program {
       border: 1px solid $color-border-light-2;
       padding: 23px 27px 27px;
+      margin-left: 70px;
+      margin-right: 70px;
     }
 
     &--contacts .form__title {
@@ -85,10 +89,13 @@
 
     &--info {
       grid-column: 1 / 2;
+      padding: 0;
     }
 
     &--program {
       padding: 25px 28px;
+      margin-left: 0;
+      margin-right: 0;
       grid-column: 2 / -1;
     }
 
