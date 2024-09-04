@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--form">
   <header class="main-header main-header--nojs container">
     <a class="main-header__link logo" href="index.html">
       <picture>
@@ -39,21 +39,21 @@
       <span class="visually-hidden">Открыть меню</span>
     </button>
   </header>
-  <main class="main-page">
-    <h1 class="main-page__title container container--md">Подбор программы</h1>
-    <p class="main-page__text container container--md">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+  <main class="main-page container container--md">
+    <h1 class="main-page__title">Подбор программы</h1>
+    <p class="main-page__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
     <form class="main-page__form form" action="https://echo.htmlacademy.ru/" method="get">
-      <div class="form__wrapper">
+      <div class="form__wrapper form__wrapper--info">
         <label class="form__label">
           Имя:*
           <input class="form__field form__field--small" name="cat-name" type="text" placeholder="Барсик" required>
         </label>
         <label class="form__label">
-          Вес(кг):*
+          Вес (кг):*
           <input class="form__field form__field--small" name="cat-weight" type="number" placeholder="7" required>
         </label>
         <label class="form__label">
-          Возраст(лет):
+          Возраст (лет):
           <input class="form__field form__field--small" name="cat-age" type="number" placeholder="7">
         </label>
       </div>
@@ -61,17 +61,17 @@
         <legend class="visually-hidden">Программа</legend>
         <label class="form__label">
           Похудение
-          <input class="visually-hidden" name="program" value="diet" type="radio" placeholder="7" checked required>
+          <input class="visually-hidden" name="program" value="diet" type="radio" checked>
           <span class="form__control form__control--radio"></span>
         </label>
         <label class="form__label">
           Набор массы
-          <input class="visually-hidden" name="program" value="gain" type="radio" placeholder="7">
+          <input class="visually-hidden" name="program" value="gain" type="radio">
           <span class="form__control form__control--radio"></span>
         </label>
         <label class="form__label">
           Не знаю (нужен ваш совет)
-          <input class="visually-hidden" name="program" value="advice" type="radio" placeholder="7">
+          <input class="visually-hidden" name="program" value="advice" type="radio">
           <span class="form__control form__control--radio"></span>
         </label>
       </fieldset>
@@ -79,11 +79,11 @@
         <legend class="form__title">
           <span class="form__title-text">Контактные данные<br> (владельца кота)</span>
         </legend>
-        <label class="form__label">
+        <label class="form__label form__label--icon form__label--email">
           E-mail:*
           <input class="form__field form__field--small" name="email" type="email" placeholder="kuklachev@gmail.com" required>
         </label>
-        <label class="form__label">
+        <label class="form__label form__label--icon form__label--phone">
           Телефон:*
           <input class="form__field form__field--small" name="phone" type="number" placeholder="8 (960) 900-60-90" required>
         </label>
@@ -92,7 +92,7 @@
         <label class="form__title" for="comment">
           <span class="form__title-text">Комментарий</span>
         </label>
-        <textarea class="form__field form__field--small" rows="6" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <textarea class="form__field form__field--small form__field--textarea" rows="6" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
       <fieldset class="form__wrapper form__wrapper--additional">
         <legend class="form__title">
@@ -100,22 +100,22 @@
         </legend>
         <label class="form__label">
           Сахарозаменитель
-          <input class="visually-hidden" name="program" value="diet" type="checkbox" placeholder="7" checked>
+          <input class="visually-hidden" name="program" value="diet" type="checkbox" checked>
           <span class="form__control form__control--checkbox"></span>
         </label>
         <label class="form__label">
           Питьевая вода
-          <input class="visually-hidden" name="program" value="gain" type="checkbox" placeholder="7">
+          <input class="visually-hidden" name="program" value="gain" type="checkbox">
           <span class="form__control form__control--checkbox"></span>
         </label>
         <label class="form__label">
           Молоко
-          <input class="visually-hidden" name="program" value="advice" type="checkbox" placeholder="7">
+          <input class="visually-hidden" name="program" value="advice" type="checkbox">
           <span class="form__control form__control--checkbox"></span>
         </label>
         <label class="form__label">
           Витамины
-          <input class="visually-hidden" name="program" value="advice" type="checkbox" placeholder="7">
+          <input class="visually-hidden" name="program" value="advice" type="checkbox">
           <span class="form__control form__control--checkbox"></span>
         </label>
       </fieldset>
