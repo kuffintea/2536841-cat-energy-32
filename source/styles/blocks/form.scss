@@ -198,6 +198,13 @@
   border: 1px solid $color-border-light-2;
   appearance: textfield;
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    display: none;
+    appearance: none;
+    margin: 0;
+  }
+
   &:not([disabled]):hover {
     border-color: $color-border-medium-2;
   }
