@@ -1,21 +1,21 @@
 @mixin font-face($font-family, $font-src, $font-weight: 400, $font-style: normal) {
   @font-face {
+    font-display: swap;
     font-family: $font-family;
     src: $font-src;
-    font-weight: $font-weight;
     font-style: $font-style;
-    font-display: swap;
+    font-weight: $font-weight;
   }
 }
 
 @mixin font($font-size, $line-height, $color: $color-basic, $font-family: $font-basic, $font-weight: 400) {
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $color;
-  font-family: $font-family;
-  font-weight: $font-weight;
   margin-top: 0;
   margin-bottom: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
 }
 
 @mixin font-min($font-size, $line-height: 1) {
@@ -24,15 +24,15 @@
 }
 
 @mixin list {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-@mixin background($background-size: contain) {
+@mixin background($background-size: contain, $background-position: center) {
   background-repeat: no-repeat;
-  background-position: center;
   background-size: $background-size;
+  background-position: $background-position;
 }
 
 @mixin pseudo-element($width, $height, $background-color: transparent) {
@@ -51,13 +51,14 @@
 }
 
 @mixin banner-gradient($image-name) {
+  @include background(cover);
   background-image: linear-gradient(rgba($color-accent, 0.85), rgba($color-accent, 0.85)), image-set(url("../../images/" + $image-name + "@1x.wepb") type("image/wepb") 1x, url("../../images/" + $image-name + "@2x.wepb") type("image/wepb") 2x, url("../../images/" + $image-name + "@1x.jpg") type("image/jpg") 1x, url("../../images/" + $image-name + "@2x.jpg") type("image/jpg") 2x);
 }
 
 @mixin accent-gradient($color1-percent, $color2-percent, $image-name, $direction: to left) {
-  background: linear-gradient($direction, rgba($color-accent, 0.85) $color1-percent, $color-light $color2-percent), image-set(url("../../images/" + $image-name + "@1x.wepb") type("image/wepb") 1x, url("../../images/" + $image-name + "@2x.wepb") type("image/wepb") 2x, url("../../images/" + $image-name + "@1x.jpg") type("image/jpg") 1x, url("../../images/" + $image-name + "@2x.jpg") type("image/jpg") 2x) no-repeat top;
+  @include background(contain, top);
   background-color: $color-basic;
-  background-size: contain;
+  background-image: linear-gradient($direction, rgba($color-accent, 0.85) $color1-percent, $color-light $color2-percent), image-set(url("../../images/" + $image-name + "@1x.wepb") type("image/wepb") 1x, url("../../images/" + $image-name + "@2x.wepb") type("image/wepb") 2x, url("../../images/" + $image-name + "@1x.jpg") type("image/jpg") 1x, url("../../images/" + $image-name + "@2x.jpg") type("image/jpg") 2x);
 }
 
 @mixin heading-lines {
@@ -68,11 +69,17 @@
     position: absolute;
     top: 50%;
     left: 0;
+    z-index: -1;
     width: 50vw;
     height: 2px;
     transform: translateY(-50%);
     background-color: $color-accent;
     box-shadow: -50vw 0 $color-accent, 50vw 0 $color-accent;
-    z-index: -1;
+  }
+
+  & > * {
+    display: inline-block;
+    background-color: $color-light;
+    box-shadow: -40px 0 $color-light, 40px 0 $color-light;
   }
 }

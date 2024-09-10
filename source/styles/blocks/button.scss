@@ -1,14 +1,19 @@
 .button {
   @include font($size-basic-2, 1.25, $color-basic, $font-second);
+  display: block;
+  padding: 10px 20px;
   text-align: center;
   text-transform: uppercase;
   background-color: $color-special-light;
   border: none;
-  padding: 10px 20px;
   cursor: pointer;
-  display: block;
 
-  &:is(:hover, :active) {
+  &[disabled] {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  &:not([disabled]):is(:hover, :active) {
     background-color: $color-special-light-3;
   }
 
@@ -18,10 +23,10 @@
   }
 
   &--accent {
-    background-color: $color-accent;
     color: $color-light;
+    background-color: $color-accent;
 
-    &:is(:hover, :active) {
+    &:not([disabled]):is(:hover, :active) {
       background-color: $color-accent-2;
     }
 

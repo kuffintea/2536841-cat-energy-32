@@ -1,29 +1,27 @@
 .main-header {
+  position: relative;
+  display: flex;
   padding-top: 13px;
   padding-bottom: 15px;
   border-bottom: 1px solid $color-border-light;
-  position: relative;
-  display: flex;
 
   @media (max-width: ($tablet - 1px)) {
     &--nojs {
-      padding-top: 0;
-      padding-bottom: 0;
-      border-bottom: none;
       display: flex;
       flex-direction: column;
+      padding: 0;
+      padding-top: 13px;
+      border-bottom: none;
     }
 
     &--nojs .main-header__link {
-      padding-top: 13px;
-      padding-right: 24px;
-      padding-bottom: 15px;
+      padding: 0 44px 15px 20px;
       border-bottom: 1px solid $color-border-light;
     }
 
-    &--nojs .main-nav {
+    &--nojs .main-header__nav {
       position: static;
-      height: auto;
+      display: block;
     }
 
     &--nojs .main-header__toggle {
@@ -32,9 +30,9 @@
   }
 
   @media (min-width: $tablet) {
+    align-items: start;
     padding-top: 25px;
     border-bottom: none;
-    align-items: start;
   }
 
   @media (min-width: $desktop) {
@@ -53,19 +51,24 @@
 }
 
 .main-header__toggle {
-  margin: 0;
+  @include background(26px, center right);
   margin-left: 8px;
   padding: 14px;
+  background-color: transparent;
+  background-image: url("../../icons/stack.svg#menu");
   border: none;
-  background: transparent url("../../icons/stack.svg#menu") no-repeat center right;
-  background-size: 24px;
   cursor: pointer;
 
-  &:is(:hover, :focus-visible, :focus) {
+  &[disabled] {
+    opacity: 0.2;
+    cursor: default;
+  }
+
+  &:not([disabled]):is(:hover, :focus-visible, :focus) {
     opacity: 0.6;
   }
 
-  &:active {
+  &:not([disabled]):active {
     opacity: 0.3;
   }
 

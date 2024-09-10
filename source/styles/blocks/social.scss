@@ -1,13 +1,10 @@
 .social__list {
   @include list;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 12px 24px;
-  max-width: 132px;
-  height: 100%;
+  gap: 24px;
 }
 
 .social__link {
@@ -16,7 +13,12 @@
     @include mask;
   }
 
-  &:active {
+  &[disabled] {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  &:not([disabled]):active {
     opacity: 0.3;
   }
 
@@ -32,7 +34,7 @@
     mask-image: url("../../icons/stack.svg#logo-telegram");
   }
 
-  &:is(:hover, :active, :focus-visible, :focus)::before {
+  &:not([disabled]):is(:hover, :focus-visible, :focus, :active)::before {
     background-color: $color-accent;
   }
 }

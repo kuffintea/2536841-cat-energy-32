@@ -6,10 +6,10 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 70px;
     display: grid;
     grid-template-columns: 1fr 245px;
     gap: 0 77px;
+    padding-top: 70px;
   }
 }
 
@@ -26,15 +26,9 @@
 
   @media (min-width: $desktop) {
     @include font-min($size-huge);
-    padding: 0;
     grid-column: 1/-1;
+    padding: 0;
   }
-}
-
-.additional__title-text {
-  background-color: $color-light;
-  box-shadow: -40px 0 $color-light, 40px 0 $color-light;
-  display: inline-block;
 }
 
 .additional__list {

@@ -31,16 +31,10 @@
   }
 }
 
-.newsletter__title-text {
-  background-color: $color-light;
-  box-shadow: -40px 0 $color-light, 40px 0 $color-light;
-  display: inline-block;
-}
-
 .newsletter__text {
   @include font($size-basic-2, 1.5, $color-main, $font-second);
-  text-align: center;
   margin-bottom: 24px;
+  text-align: center;
 
   @media (min-width: $tablet) {
     @include font-min($size-medium-2, 1.33);
@@ -48,29 +42,23 @@
   }
 
   @media (min-width: $desktop) {
+    max-width: 55%;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    max-width: 756px;
   }
 }
 
 .newsletter__form {
   @media (min-width: $tablet) {
-    padding: 0 40px;
     display: flex;
+    padding: 0 40px;
   }
 
   @media (min-width: $desktop) {
+    max-width: 756px;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    max-width: 756px;
-  }
-}
-
-.newsletter__form .form__field {
-  @media (max-width: ($tablet - 1px)) {
-    margin-bottom: 16px;
   }
 }

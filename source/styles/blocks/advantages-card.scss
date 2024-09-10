@@ -1,16 +1,15 @@
 .advantages-card {
-  counter-increment: advantage-number;
   position: relative;
+  counter-increment: advantage-number;
 
   &::before {
     @include pseudo-element(60px, 60px, $color-accent);
-    @include background;
-    background-size: 30px 32px;
+    @include background(30px 32px);
 
     @media (min-width: $tablet) {
-      margin-bottom: 31px;
       width: 80px;
       height: 80px;
+      margin-bottom: 31px;
     }
   }
 
@@ -31,8 +30,7 @@
   }
 
   @media (max-width: ($tablet - 1px)) {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
     gap: 20px;
 

@@ -4,36 +4,24 @@
   @media (max-width: ($tablet - 1px)) {
     border-bottom: 1px solid $color-border-light-2;
   }
-
-  @media (min-width: $tablet) {
-    flex-basis: calc((100% - 60px) / 2);
-  }
-
-  @media (min-width: 1200px) {
-    flex-basis: calc((100% - (60px * 2)) / 3);
-  }
-
-  @media (min-width: $desktop) {
-    flex-basis: calc((100% - (80px * 3)) / 4);
-  }
 }
 
 .more__wrapper {
-  text-align: center;
+  max-width: 350px;
   margin: 0 auto;
   padding: 21px 20px 23px;
-  max-width: 350px;
+  text-align: center;
 
   &::before {
     @include pseudo-element(30px, 30px);
     @include background;
-    background-image: url("../../icons/stack.svg#plus");
     margin: 0 auto 25px;
+    background-image: url("../../icons/stack.svg#plus");
 
     @media (min-width: $tablet) {
-      margin-bottom: 48px;
       width: 60px;
       height: 60px;
+      margin-bottom: 48px;
     }
 
     @media (min-width: $desktop) {
@@ -49,8 +37,8 @@
 
 .more__text {
   @include font($size-basic-2, 1.25, $color-special-dark-2, $font-second);
-  text-transform: uppercase;
   margin-bottom: 8px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet) {
     @include font-min($size-medium, 1.2);

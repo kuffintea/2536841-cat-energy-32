@@ -1,7 +1,7 @@
 .slider {
+  position: relative;
   display: flex;
   height: 256px;
-  position: relative;
 
   @media (min-width: $tablet) {
     height: 512px;
@@ -27,22 +27,22 @@
 }
 
 .slider__button {
-  margin: 0 auto;
-  padding: 0;
-  border: none;
-  background-color: $color-special-medium-3;
+  position: relative;
   width: 4px;
   height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $color-special-medium-3;
+  border: none;
   cursor: pointer;
-  position: relative;
 
   &::before {
     @include pseudo-element(40px, 40px, $color-light);
-    border: 2px solid $color-special-medium-3;
-    border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
+    border: 2px solid $color-special-medium-3;
+    border-radius: 50%;
     transform: translate(-50%, -50%);
   }
 
@@ -55,22 +55,27 @@
     transform: translate(-50%, -50%);
   }
 
-  &:is(:hover, :focus-visible, :focus),
-  &:is(:hover, :focus-visible, :focus)::after {
+  &[disabled] {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  &:not([disabled]):is(:hover, :focus-visible, :focus),
+  &:not([disabled]):is(:hover, :focus-visible, :focus)::after {
     background-color: $color-accent;
   }
 
-  &:active,
-  &:active::after {
-    opacity: 0.6;
+  &:not([disabled]):active,
+  &:not([disabled]):active::after {
     background-color: $color-accent-2;
+    opacity: 0.6;
   }
 
-  &:is(:hover, :focus-visible, :focus)::before {
+  &:not([disabled]):is(:hover, :focus-visible, :focus)::before {
     border-color: $color-accent;
   }
 
-  &:active::before {
+  &:not([disabled]):active::before {
     border-color: $color-accent-2;
   }
 

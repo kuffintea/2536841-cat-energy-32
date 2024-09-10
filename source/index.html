@@ -22,10 +22,10 @@
       </picture>
       <img class="logo__image-text" src="images/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
     </a>
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="#" aria-current="page">Главная</a>
+          <a class="main-nav__link main-nav__link--current" href="#" aria-current="page" tabindex="-1">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -46,7 +46,7 @@
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
         <picture>
-          <source media="(min-width: 1440px)" width="552" height="449" type="image/png" srcset="images/promo-desktop@1x.png 1x, images/promo-desktop@2x.png 2x">
+          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/promo-desktop@1x.png 1x, images/promo-desktop@2x.png 2x">
           <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/promo-tablet@1x.png 1x, images/promo-tablet@2x.png 2x">
           <img class="promo__image" src="images/promo-mobile@1x.png" srcset="images/promo-mobile@2x.png 2x" width="280" height="270" alt="Корм Cat Energy Pro со вкусом курицы.">
         </picture>
@@ -92,7 +92,7 @@
           </div>
         </dl>
         <p class="example__price">
-          Затраты на питание:
+          <span class="example__price-text">Затраты на питание:</span>
           <span class="example__price-number">15 000 руб.</span>
         </p>
         <div class="example__slider slider">
@@ -115,21 +115,14 @@
     <section class="main-footer__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper container">
-        <p class="contacts__text">Приглашаем<br>к сотрудничеству дилеров!</p>
+        <p class="contacts__text">Приглашаем<br>к сотрудничеству<br> дилеров!</p>
         <address class="contacts__description">
           ул. Большая Конюшенная, д. 19/8
           <span class="contacts__town">Санкт-Петербург</span>
         </address>
       </div>
       <div class="contacts__map-wrapper">
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197895!2d30.320472476852846!3d59.93871916209404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sam!4v1725355574750!5m2!1sru!2sam" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <noscript>
-          <picture>
-            <source media="(min-width: 1440px)" width="1440" height="400" type="image/jpeg" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="768" height="400" type="image/jpeg" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
-            <img class="contacts__image" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наш офис на карте Санкт-Петербурга.">
-          </picture>
-        </noscript>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197895!2d30.320472476852846!3d59.93871916209404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sam!4v1725355574750!5m2!1sru!2sam" width="320" height="362"></iframe>
       </div>
     </section>
     <div class="main-footer__wrapper container">

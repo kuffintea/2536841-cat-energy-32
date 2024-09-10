@@ -22,7 +22,7 @@
       </picture>
       <img class="logo__image-text" src="images/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
     </a>
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -31,7 +31,7 @@
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="#" aria-current="page">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--current" href="#" aria-current="page" tabindex="-1">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -79,7 +79,7 @@
       </div>
       <fieldset class="form__wrapper form__wrapper--contacts container container--narrow">
         <legend class="form__title">
-          <span class="form__title-text">Контактные данные<br> (владельца кота)</span>
+          <span>Контактные данные<br> (владельца кота)</span>
         </legend>
         <label class="form__label form__label--icon form__label--email">
           E-mail:*
@@ -92,13 +92,13 @@
       </fieldset>
       <div class="form__wrapper form__wrapper--comment container container--narrow">
         <label class="form__title" for="comment">
-          <span class="form__title-text">Комментарий</span>
+          <span>Комментарий</span>
         </label>
         <textarea class="form__field form__field--small form__field--textarea" rows="6" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
       <fieldset class="form__wrapper form__wrapper--additional container container--narrow">
         <legend class="form__title">
-          <span class="form__title-text">Дополнительно</span>
+          <span>Дополнительно</span>
         </legend>
         <label class="form__label">
           Сахарозаменитель
@@ -131,21 +131,14 @@
     <section class="main-footer__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper container">
-        <p class="contacts__text">Приглашаем<br>к сотрудничеству дилеров!</p>
+        <p class="contacts__text">Приглашаем<br>к сотрудничеству<br> дилеров!</p>
         <address class="contacts__description">
           ул. Большая Конюшенная, д. 19/8
           <span class="contacts__town">Санкт-Петербург</span>
         </address>
       </div>
       <div class="contacts__map-wrapper">
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197895!2d30.320472476852846!3d59.93871916209404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sam!4v1725355574750!5m2!1sru!2sam" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <noscript>
-          <picture>
-            <source media="(min-width: 1440px)" width="1440" height="400" type="image/jpeg" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="768" height="400" type="image/jpeg" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
-            <img class="contacts__image" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наш офис на карте Санкт-Петербурга.">
-          </picture>
-        </noscript>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257197895!2d30.320472476852846!3d59.93871916209404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sam!4v1725355574750!5m2!1sru!2sam" width="320" height="362"></iframe>
       </div>
     </section>
     <div class="main-footer__wrapper container">

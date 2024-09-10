@@ -14,3 +14,17 @@
     gap: 63px 80px;
   }
 }
+
+.catalog__card {
+  @media (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media (min-width: 1200px) {
+    flex-basis: calc((100% - (60px * 2)) / 3);
+  }
+
+  @media (min-width: $desktop) {
+    flex-basis: calc((100% - (80px * 3)) / 4);
+  }
+}
