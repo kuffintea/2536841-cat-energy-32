@@ -13,6 +13,7 @@
 </head>
 
 <body class="page__body page__body--index">
+  <!-- чтобы проверить меню без js, необходимо добавить модификатор main-header--nojs -->
   <header class="main-header main-header--nojs container">
     <a class="main-header__link logo" href="#" aria-current="page">
       <picture>
@@ -22,10 +23,10 @@
       </picture>
       <img class="logo__image-text" src="images/logo-text.svg" width="101" height="18" alt="Кэт энерджи.">
     </a>
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current" href="#" aria-current="page">Главная</a>
+          <a class="main-nav__link main-nav__link--current" href="#" aria-current="page" tabindex="-1">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -46,7 +47,7 @@
         <h2 class="promo__title">Функциональное питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
         <picture>
-          <source media="(min-width: 1440px)" width="552" height="449" type="image/png" srcset="images/promo-desktop@1x.png 1x, images/promo-desktop@2x.png 2x">
+          <source media="(min-width: 1440px)" width="552" height="499" type="image/png" srcset="images/promo-desktop@1x.png 1x, images/promo-desktop@2x.png 2x">
           <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/promo-tablet@1x.png 1x, images/promo-tablet@2x.png 2x">
           <img class="promo__image" src="images/promo-mobile@1x.png" srcset="images/promo-mobile@2x.png 2x" width="280" height="270" alt="Корм Cat Energy Pro со вкусом курицы.">
         </picture>
@@ -92,7 +93,7 @@
           </div>
         </dl>
         <p class="example__price">
-          Затраты на питание:
+          <span class="example__price-text">Затраты на питание:</span>
           <span class="example__price-number">15 000 руб.</span>
         </p>
         <div class="example__slider slider">
@@ -115,7 +116,7 @@
     <section class="main-footer__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper container">
-        <p class="contacts__text">Приглашаем<br>к сотрудничеству дилеров!</p>
+        <p class="contacts__text">Приглашаем<br>к сотрудничеству<br> дилеров!</p>
         <address class="contacts__description">
           ул. Большая Конюшенная, д. 19/8
           <span class="contacts__town">Санкт-Петербург</span>

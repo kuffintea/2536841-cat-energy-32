@@ -1,7 +1,7 @@
 .form__container {
   @media (min-width: $tablet) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 0 56px;
   }
@@ -12,49 +12,47 @@
 }
 
 .form__wrapper {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   border: none;
-
-  .form__title {
-    margin-bottom: 35px;
-  }
-
-  &:has(+ .form__button) {
-    margin-bottom: 32px;
-  }
 
   &--info {
     padding: 0 20px;
   }
 
   &--program {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 19px 20px;
     border-top: 1px solid $color-border-medium;
     border-bottom: 1px solid $color-border-medium;
-    padding: 19px 20px;
-  }
-
-  &--comment .form__field--textarea {
-    height: 150px;
   }
 
   @media (min-width: $tablet) {
     margin-bottom: 64px;
-    grid-column: 1 / -1;
-
-    &:has(+ .form__button) {
-      margin-bottom: 50px;
-    }
 
     &--info {
+      grid-column: 1 / -1;
       margin-bottom: 74px;
       padding: 0 70px;
     }
 
     &--program {
-      border: 1px solid $color-border-light-2;
-      padding: 23px 27px 27px;
+      grid-column: 1 / -1;
       margin-left: 70px;
       margin-right: 70px;
+      padding: 23px 27px 27px;
+      border: 1px solid $color-border-light-2;
+    }
+
+    &--additional {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 59px;
+      margin-bottom: 50px;
+    }
+
+    &--additional .form__title {
+      margin-bottom: 57px;
     }
 
     &--contacts .form__title {
@@ -64,28 +62,10 @@
     &--comment .form__title {
       margin-bottom: 88px;
     }
-
-    &--comment .form__field--textarea {
-      height: 175px;
-    }
-
-    &--additional {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px 59px;
-    }
-
-    &--additional .form__title {
-      margin-bottom: 57px;
-    }
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 73px;
-
-    &:has(+ .form__button) {
-      margin-bottom: 57px;
-    }
 
     &--info {
       grid-column: 1 / 2;
@@ -93,25 +73,26 @@
     }
 
     &--program {
-      padding: 25px 28px;
+      grid-column: 2 / -1;
       margin-left: 0;
       margin-right: 0;
-      grid-column: 2 / -1;
+      padding: 25px 28px;
     }
 
     &--contacts {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px 80px;
-    }
-
-    &--comment .form__title {
-      margin-bottom: 70px;
     }
 
     &--additional {
       grid-template-columns: repeat(4, 1fr);
       gap: 32px 82px;
+      margin-bottom: 58px;
+    }
+
+    &--comment .form__title {
+      margin-bottom: 70px;
     }
   }
 }
@@ -119,11 +100,12 @@
 .form__title {
   @include font($size-medium-2, 1.1, $color-main, $font-second);
   @include heading-lines;
-  padding: 0;
   display: block;
+  margin-bottom: 35px;
+  padding: 0;
 
   @media (min-width: $tablet) {
-    @include font-min($size-big-3, 1);
+    @include font-min($size-big-3);
 
     br {
       display: none;
@@ -131,23 +113,31 @@
   }
 }
 
-.form__title-text {
-  background-color: $color-light;
-  box-shadow: -40px 0 $color-light, 40px 0 $color-light;
-  display: inline-block;
-}
-
 .form__label {
   @include font($size-basic-2, 1.13, $color-basic, $font-second);
-  text-wrap: nowrap;
-  text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 15px;
+  text-wrap: nowrap;
+  text-transform: uppercase;
   cursor: pointer;
 
   &:not(:last-child) {
     margin-bottom: 13px;
+  }
+
+  &:has(input[disabled]) {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  input:not([disabled]):is(:focus-visible, :focus) + .form__control::after {
+    opacity: 0.6;
+  }
+
+  &:hover input:not([disabled]) + .form__control::after,
+  input:checked + .form__control::after {
+    opacity: 1;
   }
 
   &--icon {
@@ -159,6 +149,11 @@
       top: 50%;
       right: 12px;
       transform: translateY(-50%);
+      cursor: text;
+    }
+
+    .form__field {
+      padding-right: 40px;
     }
 
     @media (min-width: $desktop) {
@@ -170,12 +165,18 @@
 
   &--email::after {
     @include mask("email", $color-special-dark);
-    cursor: text;
   }
 
   &--phone::after {
     @include mask("phone", $color-special-dark);
-    cursor: text;
+  }
+
+  &--icon:has(input:focus)::after {
+    background-color: $color-accent;
+  }
+
+  &--icon:has(input:user-invalid, input:user-invalid:is(:hover, :focus-visible, :focus))::after {
+    background-color: $color-error;
   }
 
   @media (min-width: $tablet) {
@@ -186,47 +187,22 @@
       margin-bottom: 20px;
     }
   }
-
-  &--icon:has(input:focus)::after {
-    background-color: $color-accent;
-  }
-
-  &--icon:has(input:user-invalid, input:user-invalid:is(:hover, :focus-visible, :focus))::after {
-    background-color: $color-error;
-  }
-}
-
-
-@media (min-width: $tablet) {
-  .form__wrapper--program .form__label:not(:last-child) {
-    margin-bottom: 13px;
-  }
-
-  .form__wrapper--additional .form__label {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: $desktop) {
-  .form__wrapper--contacts .form__label {
-    margin-bottom: 0;
-  }
 }
 
 .form__field {
   @include font($size-medium, 1.5, $color-basic, $font-second);
-  text-transform: uppercase;
-  padding: 12px;
-  border: 1px solid $color-border-light-2;
   display: block;
   width: 100%;
+  padding: 12px;
+  text-transform: uppercase;
+  border: 1px solid $color-border-light-2;
   appearance: textfield;
 
-  &:hover {
+  &:not([disabled]):hover {
     border-color: $color-border-medium-2;
   }
 
-  &:is(:focus-visible, :focus, :active) {
+  &:not([disabled]):is(:focus-visible, :focus, :active) {
     border-color: $color-basic;
     box-shadow: 0 0 0 1px $color-basic;
   }
@@ -240,16 +216,22 @@
   &--small {
     @include font-min($size-basic-2, 1.13);
     padding: 13px 13px 12px;
+  }
 
-    @media (min-width: $tablet) {
+  &--textarea {
+    height: 150px;
+  }
+
+  @media (min-width: $tablet) {
+    &--small {
       @include font-min($size-medium, 1.5);
       padding: 10px 18px;
     }
-  }
-}
 
-.form__label--icon .form__field {
-  padding-right: 40px;
+    &--textarea {
+      height: 175px;
+    }
+  }
 }
 
 .form__field-button {
@@ -265,17 +247,17 @@
 }
 
 .form__control {
-  border: 1px solid $color-border-medium-2;
-  background-color: $color-light;
+  position: relative;
   display: block;
   width: 30px;
   height: 30px;
   flex-shrink: 0;
-  position: relative;
+  background-color: $color-light;
+  border: 1px solid $color-border-medium-2;
   order: -1;
 
   &::after {
-    @include pseudo-element(18px, 14px, $color-light);
+    @include pseudo-element(13px, 13px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -285,6 +267,8 @@
 
   &--checkbox::after {
     @include background;
+    width: 18px;
+    height: 14px;
     background-image: url("../../icons/stack.svg#check");
   }
 
@@ -292,10 +276,8 @@
     border-radius: 50%;
 
     &::after {
-      border-radius: 50%;
       background-color: $color-accent;
-      width: 13px;
-      height: 13px;
+      border-radius: 50%;
     }
   }
 
@@ -303,29 +285,16 @@
     width: 40px;
     height: 40px;
 
+    &::after {
+      width: 17px;
+      height: 17px;
+    }
+
     &--checkbox::after {
       width: 24px;
       height: 20px;
     }
-
-    &--radio::after {
-      width: 17px;
-      height: 17px;
-    }
   }
-}
-
-.form__label:has(input[disabled]) {
-  opacity: 0.3;
-}
-
-.form__label input:not([disabled]):is(:focus-visible, :focus) + .form__control::after {
-  opacity: 0.6;
-}
-
-.form__label:hover input:not([disabled]) + .form__control::after,
-.form__label input:checked + .form__control::after {
-  opacity: 1;
 }
 
 .form__button {
@@ -345,11 +314,33 @@
 
 .form__description {
   @include font($size-basic, 1.14, $color-main, $font-basic);
-  text-align: center;
   display: block;
+  text-align: center;
 
   @media (min-width: $tablet) {
-    @include font-min($size-basic-2, 1);
+    @include font-min($size-basic-2);
     text-align: start;
+  }
+}
+
+@media (max-width: ($tablet - 1px)) {
+  .newsletter__form .form__field {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .form__wrapper--program .form__label:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  .form__wrapper--additional .form__label {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .form__wrapper--contacts .form__label {
+    margin-bottom: 0;
   }
 }

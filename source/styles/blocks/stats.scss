@@ -15,10 +15,10 @@
 
 .stats__number {
   @include font($size-medium-2, 1, $color-main, $font-second);
-  text-transform: uppercase;
-  border: 1px solid #cdcdcd;
-  border-radius: 3px;
   padding: 15px 18px 16px 16px;
+  text-transform: uppercase;
+  border: 1px solid $color-border-medium-2;
+  border-radius: 3px;
 
   @media (min-width: $tablet) {
     @include font-min($size-big, 1.2);
@@ -33,15 +33,12 @@
 
   @media (min-width: $tablet) {
     @include font-min($size-basic);
-  }
-
-  @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     margin: -7px 10px 0;
     background-color: $color-light;
   }
 
   @media (min-width: $desktop) {
-    margin-left: 18px;
-    margin-right: 19px;
+    margin: -9px 19px 0 18px;
+    background-color: $color-special-light;
   }
 }

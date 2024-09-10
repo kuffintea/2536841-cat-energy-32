@@ -6,19 +6,19 @@
     top: 67px;
     left: 0;
     right: 0;
+    display: none;
     background-color: $color-light;
     overflow: auto;
-    height: 0;
 
     &--show {
-      height: auto;
+      display: block;
       max-height: calc(100vh - 67px);
     }
   }
 
   @media (min-width: $tablet) {
-    margin-left: auto;
     max-width: 70%;
+    margin-left: auto;
   }
 
   @media (min-width: $desktop) {
@@ -43,20 +43,25 @@
 
 .main-nav__link {
   @include font($size-medium, 1, $color-main, $font-second);
-  text-transform: uppercase;
-  padding: 22px 0;
-  border-bottom: 1px solid $color-border-light;
   display: block;
+  padding: 22px 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid $color-border-light;
 
-  &:is(:hover, :focus-visible, :focus) {
+  &[disabled] {
+    opacity: 0.2;
+    cursor: default;
+  }
+
+  &:not([disabled]):is(:hover, :focus-visible, :focus) {
     opacity: 0.6;
   }
 
-  &:active {
+  &:not([disabled]):active {
     opacity: 0.3;
   }
 
-  &--current:is(:hover, :focus-visible, :focus, :active) {
+  &--current:not([disabled]):is(:hover, :focus-visible, :focus, :active) {
     opacity: 1;
     cursor: default;
   }

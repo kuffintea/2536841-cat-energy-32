@@ -1,32 +1,20 @@
 .programs-card {
-  padding: 23px 20px 18px 10px;
-  background-color: $color-special-light;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 22px 12px;
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-
-    @media (min-width: $tablet) {
-      margin-bottom: 30px;
-    }
-
-    @media (min-width: $desktop) {
-      margin-bottom: 0;
-    }
-  }
+  padding: 23px 20px 18px 10px;
+  background-color: $color-special-light;
 
   &::before {
     @include pseudo-element(67px, 50px);
     @include background;
 
     @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-      width: 268px;
-      height: 217px;
       grid-column: 2/-1;
       grid-row: 1/4;
+      width: 268px;
+      height: 217px;
     }
 
     @media (min-width: $desktop) {
@@ -44,15 +32,15 @@
   }
 
   @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-    padding: 80px 28px 50px 53px;
     grid-template-columns: 1fr auto;
     align-items: stretch;
     gap: 24px 19px;
+    padding: 80px 28px 50px 53px;
   }
 
   @media (min-width: $desktop) {
-    padding: 43px 61px 55px 35px;
     gap: 23px 44px;
+    padding: 43px 61px 55px 35px;
   }
 }
 
@@ -70,11 +58,8 @@
   margin-bottom: 0;
 
   @media (max-width: ($tablet - 1px)) {
-    margin-left: 10px;
-  }
-
-  @media (max-width: ($tablet - 1px)) or (min-width: $desktop) {
     grid-column: 1 / -1;
+    margin-left: 10px;
   }
 
   @media (min-width: $tablet) {
@@ -82,23 +67,23 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 20px;
-    margin-bottom: 0;
-    margin-left: 17px;
+    grid-column: 1 / -1;
+    margin: 20px 0 0 17px;
   }
 }
 
 .programs-card__link {
   @include font($size-basic-2, 1, $color-main, $font-second);
-  text-transform: uppercase;
-  padding: 4px 0;
   display: flex;
   align-items: center;
+  padding: 4px 0;
+  text-transform: uppercase;
 
   &::after {
     @include pseudo-element(24px, 12px);
-    background-image: url("../../icons/stack.svg#arrow");
+    @include background;
     margin-left: 16px;
+    background-image: url("../../icons/stack.svg#arrow");
     transform-origin: left center;
     transition: transform 0.3s linear;
 
@@ -107,33 +92,36 @@
     }
   }
 
-  &:is(:hover, :active, :focus-visible, :focus)::after {
-    transform: scaleX(1.35);
+  &[disabled] {
+    opacity: 0.2;
+    cursor: default;
   }
 
-  &:active {
+  &:not([disabled]):active {
     color: rgba($color-main, 0.3);
   }
 
-  &:active::after {
+  &:not([disabled]):is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scaleX(1.35);
+  }
+
+  &:not([disabled]):active::after {
     opacity: 0.3;
   }
 
   @media (max-width: ($tablet - 1px)) {
+    grid-column: 1 / -1;
+    margin-left: 10px;
     padding-top: 18px;
     border-top: 1px solid $color-border-medium;
-    margin-left: 10px;
   }
 
   @media (min-width: $tablet) {
     @include font-min($size-medium, 1.5);
   }
 
-  @media (max-width: ($tablet - 1px)) or (min-width: $desktop) {
-    grid-column: 1 / -1;
-  }
-
   @media (min-width: $desktop) {
+    grid-column: 1 / -1;
     margin-left: 17px;
   }
 }

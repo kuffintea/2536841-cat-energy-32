@@ -52,8 +52,8 @@
 
 .main-page__text {
   @include font($size-basic, 1.3, $color-main, $font-second);
-  text-transform: uppercase;
   margin-bottom: 39px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet) {
     @include font-min($size-medium, 1.5);
