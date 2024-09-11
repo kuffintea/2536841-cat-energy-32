@@ -1,1 +1,0 @@
-var o=document.querySelectorAll(".main-header__toggle"),n=document.querySelector(".main-header__nav");document.querySelector(".main-header--nojs").classList.remove("main-header--nojs");for(let e of o)e.onclick=function(){n.classList.toggle("main-header__nav--show")};
