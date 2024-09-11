@@ -2,27 +2,7 @@
   text-align: center;
 
   @media (max-width: ($tablet - 1px)) {
-    position: absolute;
-    top: 67px;
-    left: 0;
-    right: 0;
-    display: none;
     background-color: $color-light;
-    overflow: auto;
-
-    &--show {
-      display: block;
-      max-height: calc(100vh - 67px);
-    }
-  }
-
-  @media (min-width: $tablet) {
-    max-width: 70%;
-    margin-left: auto;
-  }
-
-  @media (min-width: $desktop) {
-    max-width: 45%;
   }
 }
 
@@ -32,7 +12,7 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 36px;
+    gap: 10px 34px;
   }
 
   @media (min-width: $desktop) {

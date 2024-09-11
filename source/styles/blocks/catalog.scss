@@ -16,6 +16,10 @@
 }
 
 .catalog__card {
+  &--more {
+    margin-top: auto;
+  }
+
   @media (min-width: $tablet) {
     flex-basis: calc((100% - 60px) / 2);
   }

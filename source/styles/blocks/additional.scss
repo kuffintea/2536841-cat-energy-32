@@ -33,7 +33,7 @@
 
 .additional__list {
   @include list;
-  margin-bottom: 37px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet) {
     margin-bottom: 70px;

@@ -27,6 +27,10 @@
     border-bottom: 1px solid $color-border-medium;
   }
 
+  &--additional {
+    margin-bottom: 31px;
+  }
+
   @media (min-width: $tablet) {
     margin-bottom: 64px;
 
@@ -65,7 +69,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 73px;
+    margin-bottom: 74px;
 
     &--info {
       grid-column: 1 / 2;
@@ -83,6 +87,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 30px 80px;
+      margin-bottom: 70px;
     }
 
     &--additional {
@@ -101,7 +106,7 @@
   @include font($size-medium-2, 1.1, $color-main, $font-second);
   @include heading-lines;
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   padding: 0;
 
   @media (min-width: $tablet) {

@@ -50,6 +50,33 @@
   }
 }
 
+.main-header__nav {
+  @media (max-width: ($tablet - 1px)) {
+    position: absolute;
+    top: 67px;
+    left: 0;
+    right: 0;
+    display: none;
+    overflow: auto;
+
+    &--show {
+      display: block;
+      max-height: calc(100vh - 67px);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: 5px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 45%;
+    margin-right: 0;
+  }
+}
+
 .main-header__toggle {
   @include background(26px, center right);
   margin-left: 8px;
