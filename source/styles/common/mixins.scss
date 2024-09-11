@@ -35,6 +35,10 @@
   background-position: $background-position;
 }
 
+@mixin image-set($image-name) {
+  background-image: image-set(url("../../images/" + $image-name + "@1x.wepb") type("image/wepb") 1x, url("../../images/" + $image-name + "@2x.wepb") type("image/wepb") 2x, url("../../images/" + $image-name + "@1x.jpg") type("image/jpg") 1x, url("../../images/" + $image-name + "@2x.jpg") type("image/jpg") 2x);
+}
+
 @mixin pseudo-element($width, $height, $background-color: transparent) {
   content: "";
   display: block;
