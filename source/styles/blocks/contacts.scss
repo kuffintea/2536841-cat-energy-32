@@ -82,7 +82,6 @@
   @media (min-width: $desktop) {
     grid-column: 1 / -1;
     grid-row: 1 / 4;
-
     background-image: image-set(url("../../images/map-desktop@1x.wepb") type("image/wepb") 1x, url("../../images/map-desktop@2x.wepb") type("image/wepb") 2x, url("../../images/map-desktop@1x.jpg") type("image/jpg") 1x, url("../../images/map-desktop@2x.jpg") type("image/jpg") 2x);
   }
 }
