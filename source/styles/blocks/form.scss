@@ -335,12 +335,6 @@
   }
 }
 
-@media (max-width: ($tablet - 1px)) {
-  .newsletter__form .form__field {
-    margin-bottom: 16px;
-  }
-}
-
 @media (min-width: $tablet) {
   .form__wrapper--program .form__label:not(:last-child) {
     margin-bottom: 13px;

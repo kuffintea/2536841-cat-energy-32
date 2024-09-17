@@ -1,9 +1,11 @@
 .main-footer {
   background-color: $color-special-light;
-}
 
-.page__body--index .main-footer__contacts {
-  background-color: $color-light;
+  .logo__image-text {
+    @media (min-width: $tablet) {
+      margin-right: 34px;
+    }
+  }
 }
 
 .main-footer__wrapper {
