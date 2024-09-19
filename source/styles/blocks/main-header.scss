@@ -1,11 +1,4 @@
 .main-header {
-  .logo__image-text {
-    @media (min-width: $desktop) {
-      height: 21px;
-      width: 118px;
-    }
-  }
-
   @media (max-width: ($tablet - 1px)) {
     &--nojs .main-header__wrapper {
       display: block;
@@ -47,6 +40,13 @@
   @media (min-width: $desktop) {
     padding-top: 55px;
     padding-bottom: 0;
+  }
+}
+
+.main-header__logo-text {
+  @media (min-width: $desktop) {
+    height: 21px;
+    width: 118px;
   }
 }
 

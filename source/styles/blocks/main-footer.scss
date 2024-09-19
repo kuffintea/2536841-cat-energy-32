@@ -1,11 +1,5 @@
 .main-footer {
   background-color: $color-special-light;
-
-  .logo__image-text {
-    @media (min-width: $tablet) {
-      margin-right: 34px;
-    }
-  }
 }
 
 .main-footer__wrapper {
@@ -31,6 +25,12 @@
   @media (min-width: $desktop) {
     padding-top: 66px;
     padding-bottom: 66px;
+  }
+}
+
+.main-footer__image-text {
+  @media (min-width: $tablet) {
+    margin-right: 34px;
   }
 }
 

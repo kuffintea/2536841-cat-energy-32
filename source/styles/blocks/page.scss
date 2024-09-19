@@ -2,15 +2,13 @@
   @include font($size-basic, 1.3, $color-basic);
   margin: 0;
 
-  &--index {
-    .main-page {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+  &--index .main-page {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-    .main-footer__contacts {
-      background-color: $color-light;
-    }
+  &--index .main-footer__contacts {
+    background-color: $color-light;
   }
 
   @media (max-width: ($tablet - 1px)) {

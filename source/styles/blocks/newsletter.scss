@@ -50,12 +50,6 @@
 }
 
 .newsletter__form {
-  @media (max-width: ($tablet - 1px)) {
-    .form__field {
-      margin-bottom: 16px;
-    }
-  }
-
   @media (min-width: $tablet) {
     display: flex;
     padding: 0 40px;
@@ -66,5 +60,11 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+  }
+}
+
+@media (max-width: ($tablet - 1px)) {
+  .newsletter__field {
+    margin-bottom: 16px;
   }
 }
