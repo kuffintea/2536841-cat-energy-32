@@ -31,16 +31,3 @@
     margin-right: 13px;
   }
 }
-
-.main-header .logo__image-text {
-  @media (min-width: $desktop) {
-    height: 21px;
-    width: 118px;
-  }
-}
-
-.main-footer .logo__image-text {
-  @media (min-width: $tablet) {
-    margin-right: 34px;
-  }
-}

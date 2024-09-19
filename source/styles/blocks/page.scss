@@ -2,7 +2,47 @@
   @include font($size-basic, 1.3, $color-basic);
   margin: 0;
 
+  &--index .main-page {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &--index .main-footer__contacts {
+    background-color: $color-light;
+  }
+
+  @media (max-width: ($tablet - 1px)) {
+    &--catalog .main-page__title {
+      padding-bottom: 42px;
+      border-bottom: 1px solid $color-border-light-2;
+    }
+  }
+
   @media (min-width: $tablet) {
     @include font-min($size-basic-2, 1.5);
+
+    &--catalog .main-page__title {
+      @include font-min($size-huge-2);
+      margin-bottom: 84px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--index .main-header {
+      @include accent-gradient(50%, 50%, "cat-desktop");
+      background-position: top right;
+    }
+
+    &--index .main-nav__link {
+      color: $color-light;
+
+      &--current {
+        box-shadow: inset 0 -2px $color-light;
+      }
+    }
+
+    &--form .main-page {
+      padding-bottom: 76px;
+    }
   }
 }

@@ -8,22 +8,10 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 60px;
+    padding-top: 75px;
     padding-bottom: 79px;
   }
 }
-
-.page__body--index .main-page {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.page__body--form .main-page {
-  @media (min-width: $desktop) {
-    padding-bottom: 76px;
-  }
-}
-
 
 .main-page__title {
   @include font($size-big-3, 1, $color-main, $font-second);
@@ -35,18 +23,6 @@
   @media (min-width: $tablet) {
     @include font-min($size-huge-2);
     margin-bottom: 54px;
-  }
-}
-
-.page__body--catalog .main-page__title {
-  @media (max-width: ($tablet - 1px)) {
-    padding-bottom: 42px;
-    border-bottom: 1px solid $color-border-light-2;
-  }
-
-  @media (min-width: $tablet) {
-    @include font-min($size-huge-2);
-    margin-bottom: 84px;
   }
 }
 

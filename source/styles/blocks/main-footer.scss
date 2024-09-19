@@ -2,10 +2,6 @@
   background-color: $color-special-light;
 }
 
-.page__body--index .main-footer__contacts {
-  background-color: $color-light;
-}
-
 .main-footer__wrapper {
   padding-top: 41px;
   padding-bottom: 41px;
@@ -29,6 +25,12 @@
   @media (min-width: $desktop) {
     padding-top: 66px;
     padding-bottom: 66px;
+  }
+}
+
+.main-footer__image-text {
+  @media (min-width: $tablet) {
+    margin-right: 34px;
   }
 }
 

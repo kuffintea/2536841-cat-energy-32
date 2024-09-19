@@ -195,7 +195,10 @@
 }
 
 .form__field {
-  @include font($size-medium, 1.5, $color-basic, $font-second);
+  @include font-min($size-medium, 1.5);
+  font-family: $font-second;
+  font-weight: 400;
+  color: $color-basic;
   display: block;
   width: 100%;
   padding: 12px;
@@ -332,12 +335,6 @@
   @media (min-width: $tablet) {
     @include font-min($size-basic-2);
     text-align: start;
-  }
-}
-
-@media (max-width: ($tablet - 1px)) {
-  .newsletter__form .form__field {
-    margin-bottom: 16px;
   }
 }
 
