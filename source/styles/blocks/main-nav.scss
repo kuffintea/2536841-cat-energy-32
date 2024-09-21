@@ -4,6 +4,16 @@
   @media (max-width: ($tablet - 1px)) {
     background-color: $color-light;
   }
+
+  @media (min-width: $desktop) {
+    &--index .main-nav__link {
+      color: $color-light;
+
+      &--current {
+        box-shadow: inset 0 -2px $color-light;
+      }
+    }
+  }
 }
 
 .main-nav__list {

@@ -1,15 +1,36 @@
 .main-page {
-  padding-top: 27px;
-  padding-bottom: 32px;
+  &--catalog,
+  &--form {
+    padding-top: 27px;
+    padding-bottom: 32px;
 
-  @media (min-width: $tablet) {
-    padding-top: 50px;
-    padding-bottom: 60px;
+    @media (min-width: $tablet) {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 75px;
+      padding-bottom: 79px;
+    }
   }
 
-  @media (min-width: $desktop) {
-    padding-top: 75px;
-    padding-bottom: 79px;
+  &--form {
+    @media (min-width: $desktop) {
+      padding-bottom: 76px;
+    }
+  }
+
+  &--catalog .main-page__title {
+    @media (max-width: ($tablet - 1px)) {
+      padding-bottom: 42px;
+      border-bottom: 1px solid $color-border-light-2;
+    }
+
+    @media (min-width: $tablet) {
+      @include font-min($size-huge-2);
+      margin-bottom: 84px;
+    }
   }
 }
 
