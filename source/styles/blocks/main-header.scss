@@ -21,6 +21,13 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop) {
+    &--index {
+      @include accent-gradient(50%, 50%, "cat-desktop");
+      background-position: top right;
+    }
+  }
 }
 
 .main-header__wrapper {
